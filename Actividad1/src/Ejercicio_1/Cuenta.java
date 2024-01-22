@@ -77,7 +77,7 @@ public class Cuenta {
                 System.out.println("La cantidad retirada supera el saldo actuañ");
                 this.cantidad = 0;
             }
-        }else{
+        } else {
             System.out.println("La cantidad debe ser mayor que cero");
         }
     }

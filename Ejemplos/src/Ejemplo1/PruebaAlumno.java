@@ -10,7 +10,7 @@ public class PruebaAlumno {
 		a1.setNombre("Juan");
 		n=a1.getNombre();
 		System.out.println("Nombre Alumno: " +n);
-		a1.toString();
+		
 
 		
 	}

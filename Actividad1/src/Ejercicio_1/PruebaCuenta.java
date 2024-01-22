@@ -3,6 +3,7 @@ package Ejercicio_1;
 public class PruebaCuenta {
 
 	public static void main(String[] args) {
+        
 		// Crear una cuenta con titular
         Cuenta cuenta1 = new Cuenta("Juan");
 

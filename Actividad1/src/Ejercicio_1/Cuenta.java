@@ -15,70 +15,118 @@ public class Cuenta {
      * pasa a ser 0.
      */
 
-    // Atributos
+    /*
+     * Atributos
+     */
+
     private String titular;
     private double cantidad;
 
-    // Constructores
-    // Contructor con cantidad opcional
+    /*
+     * Constructores
+     */
+
+    /**
+     * Constructor con un parámetro y la cantidad opcional
+     * 
+     * @param titular : String
+     */
+
     public Cuenta(String titular) {
         this.titular = titular;
         this.cantidad = 0.0;
     }
 
-    // Contructor con titular y cantidad
+    /**
+     * Constructor con dos parámetros
+     * 
+     * @param titular  : String
+     * @param cantidad : double
+     */
+
     public Cuenta(String titular, double cantidad) {
         this.titular = titular;
         this.cantidad = cantidad;
     }
 
-    // Métodos get y set
+    /*
+     * Métodos set y get
+     */
+
+    /**
+     * Metodo get del atributo titular
+     * @return : String
+     */
 
     public String getTitular() {
         return titular;
     }
 
+    /**
+     * Metodo set del atributo titular
+     * 
+     * @param titular : String
+     */
+
     public void setTitular(String titular) {
         this.titular = titular;
     }
+
+    /**
+     * Metodo get del atributo cantidad
+     * @return : double
+     */
 
     public double getCantidad() {
         return cantidad;
     }
 
+    /**
+     * Metodo set del atributo cantidad
+     * 
+     * @param cantidad : double
+     */
+
     public void setCantidad(double cantidad) {
         this.cantidad = cantidad;
     }
 
-    @Override
+    /**
+     * Metodo tuString de la clase cuenta
+     */
+
     public String toString() {
         return "Cuenta [titular=" + titular + ", cantidad=" + cantidad + "]";
     }
 
-    // Métodos especiales
-    // Método para ingresar una cantidad
+    /*
+     * Métodos especiales
+     */
+
+    /**
+     * Método que permite ingresar una cantidad a la cuenta
+     * 
+     * @param cantidad : double
+     */
+
     public void ingresar(double cantidad) {
-        if (cantidad > 0) {
+        if (cantidad >= 0) {
             this.cantidad += cantidad;
-            System.out.println("Se ha ingresado la cantidad de " + cantidad + " euros a la cuenta de " + titular);
-            ;
-        } else {
-            System.out.println("La cantidad debe ser mayor que cero");
         }
     }
 
-    public void retirar(double cantidad) {
-        double saldoDespues = this.cantidad - cantidad;
-        if (cantidad > 0) {
-            if (saldoDespues >= 0) {
-                this.cantidad -= cantidad;
-                System.out.println("Se ha retirado la cantidad de " + cantidad + " euros a la cuenta de " + titular);
-            } else {
-                System.out.println("La cantidad retirada supera el saldo actuañ");
-                this.cantidad = 0;
-            }
+    /**
+     * Método que permite retirar una cantidad de la cuenta
+     * 
+     * @param cantidad : double
+     */
+
+    public void retirar(double cantidadACuenta) {
+
+        if (this.cantidad < cantidadACuenta) {
+            this.cantidad = 0;
         } else {
-            System.out.println("La cantidad debe ser mayor que cero");
+            this.cantidad -= cantidadACuenta;
         }
     }
 }

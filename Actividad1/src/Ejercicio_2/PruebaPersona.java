@@ -71,6 +71,12 @@ public class PruebaPersona {
 
 	}
 
+	/**
+	 * Comprueba si la persona está en su peso ideal, tiene sobrepeso o por debajo
+	 * 
+	 * @param p : objeto persona
+	 */
+
 	public static void comprobarPesoIdeal(Persona p) {
 		int resultadoIMC = p.calcularIMC();
 		if (resultadoIMC == -1) {
@@ -82,6 +88,12 @@ public class PruebaPersona {
 		}
 
 	}
+
+	/**
+	 * Comprueba si la persona es mayor de edad
+	 * 
+	 * @param p : objeto persona
+	 */
 
 	private static void comprobarMayorEdad(Persona p) {
 		if (p.esMayorDeEdad()) {

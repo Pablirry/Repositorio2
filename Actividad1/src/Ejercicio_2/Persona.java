@@ -43,18 +43,44 @@ public class Persona {
     private double peso;
     private double altura;
 
-    // Constante sexo por defecto
+    /*
+     * Constante sexo por defecto
+     */
     private static final char SEXO_POR_DEFECTO = 'H';
 
-    // Constructores
+    /*
+     * Constructores
+     */
+
+    /**
+     * Constructor de la clase Persona
+     */
 
     public Persona() {
         this("", 0, SEXO_POR_DEFECTO, 0, 0);
     }
 
+    /**
+     * Contructor con tres parametros
+     * 
+     * @param nombre : String
+     * @param edad   : entero
+     * @param sexo   : caracter
+     */
+
     public Persona(String nombre, int edad, char sexo) {
         this(nombre, edad, sexo, 0, 0);
     }
+
+    /**
+     * Constructor con todos los parametros
+     * 
+     * @param nombre : String
+     * @param edad   : entero
+     * @param sexo   : caracter
+     * @param peso   : double
+     * @param altura : double
+     */
 
     public Persona(String nombre, int edad, char sexo, double peso, double altura) {
         this.nombre = nombre;
@@ -65,12 +91,31 @@ public class Persona {
         this.altura = altura;
     }
 
-    // Metodos privados
+    /*
+     * Metodos privados
+     */
+
+    /**
+     * Comprueba que el sexo introducido es correcto.
+     * 
+     * @param sexo : caracter
+     * @return : caracter
+     */
 
     private char comprobarSexo(char sexo) {
-        return (sexo == 'H' || sexo == 'M') ? sexo : SEXO_POR_DEFECTO;
+        if (sexo == 'H' || sexo == 'M') {
+            return sexo;
+        } else {
+            return SEXO_POR_DEFECTO;
+        }
 
     }
+
+    /**
+     * Genera un numero de 8 cifras aleatorio
+     * 
+     * @return : String
+     */
 
     private String generaDNI() {
         Random rand = new Random();
@@ -79,13 +124,29 @@ public class Persona {
         return Integer.toString(numeroDNI) + letraDNI;
     }
 
+    /**
+     * Calcula la letra del DNI
+     * 
+     * @param dni : entero
+     * @return : caracter
+     */
+
     private char calcularLetraDNI(int dni) {
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         int resto = dni % 23;
         return letras.charAt(resto);
     }
 
-    // Métodos públicos
+    /*
+     * Métodos públicos
+     */
+
+    /**
+     * Calcula el IMC de una persona
+     * 
+     * @return : entero
+     */
+
     public int calcularIMC() {
         double imc = peso / Math.pow(altura, 2);
         if (imc < 20) {
@@ -97,60 +158,127 @@ public class Persona {
         }
     }
 
+    /**
+     * Indica si es mayor de edad
+     * 
+     * @return : boolean
+     */
+
     public boolean esMayorDeEdad() {
         return edad >= 18;
     }
 
-    @Override
+    /**
+     * Metodo toString de la clase Persona
+     */
+
     public String toString() {
         return "nombre=" + nombre +
                 "\nEdad=" + edad +
                 "\nDNI=" + DNI +
                 "\nSexo=" + sexo +
-                "\nPeso=" + peso + 
+                "\nPeso=" + peso +
                 "\nAltura=" + altura;
     }
+
+    /**
+     * Metodo set del atributo nombre
+     * 
+     * @param nombre : String
+     */
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * Metodo set del atributo edad
+     * 
+     * @param edad : entero
+     */
+
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    /**
+     * Metodo set del atributo sexo
+     * 
+     * @param sexo : caracter
+     */
 
     public void setSexo(char sexo) {
         this.sexo = sexo;
     }
 
+    /**
+     * Metodo set del atributo peso
+     * 
+     * @param peso : double
+     */
+
     public void setPeso(double peso) {
         this.peso = peso;
     }
+
+    /**
+     * Metodo set del atributo altura
+     * 
+     * @param altura : double
+     */
 
     public void setAltura(double altura) {
         this.altura = altura;
     }
 
-    
+    /**
+     * Metodo get del atributo nombre
+     * 
+     * @return : String
+     */
+
     public String getNombre() {
         return nombre;
     }
+
+    /**
+     * Metodo get del atributo edad
+     * 
+     * @return : entero
+     */
 
     public int getEdad() {
         return edad;
     }
 
+    /**
+     * Metodo get del atributo sexo
+     * 
+     * @return : caracter
+     */
+
     public char getSexo() {
         return sexo;
     }
+
+    /**
+     * Metodo get del atributo peso
+     * 
+     * @return : double
+     */
 
     public double getPeso() {
         return peso;
     }
 
+    /**
+     * Metodo get del atributo altura
+     * 
+     * @return : double
+     */
+
     public double getAltura() {
         return altura;
     }
-
 
 }

@@ -55,6 +55,7 @@ public class Cuenta {
 
     /**
      * Metodo get del atributo titular
+     * 
      * @return : String
      */
 
@@ -74,6 +75,7 @@ public class Cuenta {
 
     /**
      * Metodo get del atributo cantidad
+     * 
      * @return : double
      */
 
@@ -92,7 +94,7 @@ public class Cuenta {
     }
 
     /**
-     * Metodo tuString de la clase cuenta
+     * Metodo toString de la clase cuenta
      */
 
     public String toString() {

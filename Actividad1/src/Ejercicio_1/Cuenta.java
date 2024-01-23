@@ -26,7 +26,7 @@ public class Cuenta {
         this.cantidad = 0.0;
     }
 
-    // Contructor con cantidad titular y cantidad
+    // Contructor con titular y cantidad
     public Cuenta(String titular, double cantidad) {
         this.titular = titular;
         this.cantidad = cantidad;

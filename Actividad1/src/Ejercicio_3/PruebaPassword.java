@@ -1,6 +1,10 @@
 package Ejercicio_3;
 
+import java.util.Scanner;
+
 public class PruebaPassword {
+
+	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
@@ -15,6 +19,28 @@ public class PruebaPassword {
 		 * o contraseña1 valor_booleano1
 		 * o contraseña2 valor_bololeano2
 		 */
+
+		System.out.println("Introduce cuantas contraseñas quieres generar: ");
+		int tamanoPass = sc.nextInt();
+		sc.nextLine();
+
+		System.out.println("Longitud de las contraseñas: ");
+		int longPass = sc.nextInt();
+		sc.nextLine();
+
+		Password[] passwords = new Password[tamanoPass];
+
+		boolean[] fuerte = new boolean[tamanoPass];
+
+		for (int i = 0; i < tamanoPass; i++) {
+			passwords[i] = new Password(longPass);
+			fuerte[i] = passwords[i].esFuerte();
+		}
+
+		System.out.println("Contraseñas: ");
+		for (int i = 0; i < tamanoPass; i++) {
+			System.out.println(passwords[i].getContraseña() + " " + fuerte[i]);
+		}
 
 	}
 

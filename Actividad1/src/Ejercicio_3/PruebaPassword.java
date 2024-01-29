@@ -27,9 +27,17 @@ public class PruebaPassword {
 
 		Password v[] = new Password[dim];
 
+		System.out.println("Contraseñas generadas: ");
+
 		for(int i = 0; i < v.length; i++){
 			v[i] = new Password(longitud);
 			System.out.println(v[i].toString());
+			if(v[i].esFuerte()==true){
+				System.out.println("La contraseña es fuerte");
+			}else{
+				System.out.println("La contraseña no es fuerte");
+			}
+			
 		}
 
 	}

@@ -24,12 +24,8 @@ public class Password {
     private int longitud;
     private String contraseña;
 
-    /*
-     * Constructores
-     */
-
     /**
-     * Constructor por defecto.
+     * Contructor por defecto.
      */
 
     public Password() {
@@ -38,7 +34,7 @@ public class Password {
     }
 
     /**
-     * Constructor con un parametro.
+     * Contructor con el parametro longitud
      * 
      * @param longitud : entero
      */
@@ -48,61 +44,33 @@ public class Password {
         generarPassword();
     }
 
-    /*
-     * Metodos
-     */
-
-    /**
-     * Devuelve si la contraseña es fuerte o no.
-     * 
-     * @return : booleano
-     */
-
-    public boolean esFuerte() {
-        int mayusculas = 0;
-        int minusculas = 0;
-        int numeros = 0;
-
-        for (int i = 0; i < contraseña.length(); i++) {
-            char c = contraseña.charAt(i);
-
-            if (Character.isDigit(c)) {
-                numeros++;
-            } else if (Character.isLowerCase(c)) {
-                minusculas++;
-            } else if (Character.isUpperCase(c)) {
-                mayusculas++;
-            }
-
-        }
-
-        return mayusculas > 2 && minusculas > 1 && numeros > 5;
-    }
-
     /**
      * Genera una contraseña aleatoria con la longitud que tenga.
      */
 
-    public void generarPassword() {
-        StringBuilder password = new StringBuilder();
-
-        Random random = new Random();
-        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-        for (int i = 0; i < longitud; i++) {
-            int index = random.nextInt(caracteres.length());
-            password.append(caracteres.charAt(index));
+    private void generarPassword() {
+        this.contraseña = "";
+        for (int i = 1; i <= longitud; i++) {
+            int tipo = (int) (Math.random() * 3);
+            if (tipo == 0) {
+                int valor = (int) (Math.random() * 10);
+                contraseña += valor;
+            }
+            if (tipo == 1) {
+                int valor = (int) (Math.random() * 26);
+                char letraMay = (char) ('A' + valor);
+                contraseña += letraMay;
+            }
+            if (tipo == 2) {
+                int valor = (int) (Math.random() * 26);
+                char letraMin = (char) ('a' + valor);
+                contraseña += letraMin;
+            }
         }
-
-        this.contraseña = password.toString();
     }
 
-    /*
-     * Get y set
-     */
-
     /**
-     * Metodo get del atributo longitud
+     * Metodo get de la longitud
      * 
      * @return : entero
      */
@@ -112,7 +80,7 @@ public class Password {
     }
 
     /**
-     * Metodo get del atributo contraseña
+     * Metodo get de la contraseña
      * 
      * @return : String
      */
@@ -122,7 +90,7 @@ public class Password {
     }
 
     /**
-     * Metodo set del atributo longitud
+     * Metodo set para el atributo longitud
      * 
      * @param longitud : entero
      */
@@ -130,5 +98,41 @@ public class Password {
     public void setLongitud(int longitud) {
         this.longitud = longitud;
     }
+
+    /**
+     * Metodo toString de la clase Password
+     */
+    public String toString() {
+        return "Password [longitud=" + longitud + ", contraseña=" + contraseña + "]";
+    }
+
+    /**
+     * devuelve un booleano si es fuerte o no, para que sea fuerte debe tener mas de 2 mayúsculas, mas de 1 minúscula y mas de 5 números.
+     * @return : boolean
+     */
+
+    public boolean esFuerte(){
+        int mayusculas = 0;
+        int minusculas = 0;
+        int numeros = 0;
+        for (int i = 0; i < this.longitud; i++) {
+            char car= this.contraseña.charAt(i);
+            if(Character.isDigit(car)==true){
+                numeros++;
+            }
+            if(Character.isUpperCase(car)==true){
+                mayusculas++;
+            }
+            if(Character.isLowerCase(car)==true){
+                minusculas++;
+            }
+        }
+
+        if(numeros<=5) return false;
+        if(mayusculas<=2) return false;
+        if(minusculas<=1) return false;
+
+        return true;
+}
 
 }

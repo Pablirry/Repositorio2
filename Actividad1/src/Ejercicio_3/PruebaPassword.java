@@ -20,26 +20,16 @@ public class PruebaPassword {
 		 * o contraseña2 valor_bololeano2
 		 */
 
-		System.out.println("Introduce cuantas contraseñas quieres generar: ");
-		int tamanoPass = sc.nextInt();
-		sc.nextLine();
+		System.out.println("Dim: ");
+		int dim = sc.nextInt();
+		System.out.println("Longitud: ");
+		int longitud = sc.nextInt();
 
-		System.out.println("Longitud de las contraseñas: ");
-		int longPass = sc.nextInt();
-		sc.nextLine();
+		Password v[] = new Password[dim];
 
-		Password[] passwords = new Password[tamanoPass];
-
-		boolean[] fuerte = new boolean[tamanoPass];
-
-		for (int i = 0; i < tamanoPass; i++) {
-			passwords[i] = new Password(longPass);
-			fuerte[i] = passwords[i].esFuerte();
-		}
-
-		System.out.println("Contraseñas: ");
-		for (int i = 0; i < tamanoPass; i++) {
-			System.out.println(passwords[i].getContraseña() + " " + fuerte[i]);
+		for(int i = 0; i < v.length; i++){
+			v[i] = new Password(longitud);
+			System.out.println(v[i].toString());
 		}
 
 	}

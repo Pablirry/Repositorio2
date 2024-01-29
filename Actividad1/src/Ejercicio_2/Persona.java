@@ -40,7 +40,7 @@ public class Persona {
     private int edad;
     private String DNI;
     private char sexo; // H o M
-    private double peso;
+    private int peso;
     private double altura;
 
     /*
@@ -57,7 +57,11 @@ public class Persona {
      */
 
     public Persona() {
-        this("", 0, SEXO_POR_DEFECTO, 0, 0);
+        this.nombre = "";
+        this.edad = 0;
+        this.sexo = SEXO_POR_DEFECTO;
+        this.peso = 0;
+        this.altura = 0.0;
     }
 
     /**
@@ -69,7 +73,16 @@ public class Persona {
      */
 
     public Persona(String nombre, int edad, char sexo) {
-        this(nombre, edad, sexo, 0, 0);
+        this.nombre = nombre;
+        this.edad=edad;
+        generaDNI();
+        if(comprobarSexo(sexo)==true){
+            this.sexo=sexo;
+        }else{
+            this.sexo=SEXO_POR_DEFECTO;
+        }
+        this.altura=0.0;
+        this.peso=0;
     }
 
     /**
@@ -82,11 +95,15 @@ public class Persona {
      * @param altura : double
      */
 
-    public Persona(String nombre, int edad, char sexo, double peso, double altura) {
+    public Persona(String nombre, int edad, char sexo, int peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
         this.DNI = generaDNI();
-        this.sexo = comprobarSexo(sexo);
+        if (comprobarSexo(sexo) == true) {
+            this.sexo = sexo;
+        } else {
+            this.sexo = SEXO_POR_DEFECTO;
+        }
         this.peso = peso;
         this.altura = altura;
     }
@@ -102,12 +119,14 @@ public class Persona {
      * @return : caracter
      */
 
-    private char comprobarSexo(char sexo) {
-        if (sexo == 'H' || sexo == 'M') {
-            return sexo;
-        } else {
-            return SEXO_POR_DEFECTO;
+    private boolean comprobarSexo(char letra) {
+        if (letra=='H' || letra=='h'){
+            return true;
         }
+        if (letra=='M' || letra=='m'){
+            return true;
+        }
+        return false;
 
     }
 
@@ -121,8 +140,9 @@ public class Persona {
         Random rand = new Random();
         int numeroDNI = rand.nextInt(90000000) + 10000000;
         char letraDNI = calcularLetraDNI(numeroDNI);
-        return Integer.toString(numeroDNI) + letraDNI;
+        return String.valueOf(numeroDNI) + letraDNI;
     }
+
 
     /**
      * Calcula la letra del DNI
@@ -142,13 +162,17 @@ public class Persona {
      */
 
     /**
-     * Calcula el IMC de una persona
+     * calculara si la persona esta en su peso ideal (peso en kg/(altura^2 en m)),
+     * si esta fórmula devuelve un valor menor que 20, la función devuelve un -1, si
+     * devuelve un número entre 20 y 25 (incluidos), significa que esta por debajo
+     * de su peso ideal la función devuelve un 0 y si devuelve un valor mayor que 25
+     * significa que tiene sobrepeso, la función devuelve un 1.
      * 
      * @return : entero
      */
-
+    
     public int calcularIMC() {
-        double imc = peso / Math.pow(altura, 2);
+        double imc = peso / (altura*altura);
         if (imc < 20) {
             return -1;
         } else if (imc >= 20 && imc <= 25) {
@@ -165,7 +189,11 @@ public class Persona {
      */
 
     public boolean esMayorDeEdad() {
-        return edad >= 18;
+        if(edad>18){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**
@@ -208,7 +236,11 @@ public class Persona {
      */
 
     public void setSexo(char sexo) {
-        this.sexo = sexo;
+        if(comprobarSexo(sexo)==true){
+            this.sexo=sexo;
+        }else{
+            this.sexo=SEXO_POR_DEFECTO;
+        }
     }
 
     /**
@@ -217,7 +249,7 @@ public class Persona {
      * @param peso : double
      */
 
-    public void setPeso(double peso) {
+    public void setPeso(int peso) {
         this.peso = peso;
     }
 
@@ -279,6 +311,16 @@ public class Persona {
 
     public double getAltura() {
         return altura;
+    }
+
+    /**
+     * Metodo get del atributo DNI
+     * 
+     * @return : String
+     */
+
+    public String getDNI() {
+        return DNI;
     }
 
 }

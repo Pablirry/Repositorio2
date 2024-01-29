@@ -20,87 +20,47 @@ public class PruebaPersona {
 		 * 5. Por último, mostrar la información de cada objeto.
 		 */
 
-		// Primer objeto
+		// Primer objeto (nombre,edad,sexo,peso,altura)
 		System.out.println("Primera persona: ");
 		System.out.print("Nombre: ");
-		String nombre1 = sc.nextLine();
+		String nombre = sc.next();
 		System.out.print("Edad: ");
-		int edad1 = sc.nextInt();
+		int edad = sc.nextInt();
 		System.out.print("Sexo (H/M): ");
-		char sexo1 = sc.next().charAt(0);
+		char sexo = sc.next().charAt(0);
 		System.out.print("Peso: ");
-		double peso1 = sc.nextDouble();
+		int peso = sc.nextInt();
 		System.out.print("Altura: ");
-		double altura1 = sc.nextDouble();
+		double altura = sc.nextDouble();
 
-		Persona p1 = new Persona(nombre1, edad1, sexo1, peso1, altura1);
-
-		// Segundo objeto
-		sc.nextLine();
-		System.out.println("Segunda persona sin peso y altura: ");
-		System.out.print("Nombre: ");
-		String nombre2 = sc.nextLine();
-		System.out.print("Edad: ");
-		int edad2 = sc.nextInt();
-		System.out.print("Sexo (H/M): ");
-		char sexo2 = sc.next().charAt(0);
-
-		Persona p2 = new Persona(nombre2, edad2, sexo2);
-
-		// Tercer objeto
-		sc.nextLine();
-		System.out.println("Tercera persona (Por defecto)");
+		Persona p1 = new Persona(nombre, edad, sexo, peso, altura);
+		Persona p2 = new Persona(nombre, edad, sexo);
 		Persona p3 = new Persona();
 		p3.setNombre("Pedro");
-		p3.setEdad(20);
+		p3.setEdad(10);
+		p3.setSexo('H');
+		p3.setPeso(30);
+		p3.setAltura(1.40);
 
-		// Información de los objetos
+		Persona v[] = new Persona[3];
+		v[0] = p1;
+		v[1] = p2;
+		v[2] = p3;
 
-		System.out.println("Información de los objetos:");
-		System.out.println("Persona 1: \n " + p1.toString());
-		comprobarPesoIdeal(p1);
-		comprobarMayorEdad(p1);
-
-		System.out.println("Persona 2: \n " + p2.toString());
-		comprobarPesoIdeal(p2);
-		comprobarMayorEdad(p2);
-
-		System.out.println("Persona 3: \n " + p3.toString());
-		comprobarPesoIdeal(p3);
-		comprobarMayorEdad(p3);
-
-	}
-
-	/**
-	 * Comprueba si la persona está en su peso ideal, tiene sobrepeso o por debajo
-	 * 
-	 * @param p : objeto persona
-	 */
-
-	public static void comprobarPesoIdeal(Persona p) {
-		int resultadoIMC = p.calcularIMC();
-		if (resultadoIMC == -1) {
-			System.out.println(p.getNombre() + " está por debajo de su peso ideal.");
-		} else if (resultadoIMC == 0) {
-			System.out.println(p.getNombre() + " está en su peso ideal.");
-		} else {
-			System.out.println(p.getNombre() + " tiene sobrepeso.");
+		for (int i = 0; i < v.length; i++){
+			System.out.println(v[i].toString());
+			if(v[i].calcularIMC()==0) {
+				System.out.println("Peso Ideal");
+			}else if(v[i].calcularIMC()==1){
+				System.out.println("Sobrepeso");
+			}else{
+				System.out.println("Por debajo del peso ideal");
+			}
+			if(v[i].esMayorDeEdad()==true) {
+				System.out.println("Es mayor de edad");
+			} else if(v[i].esMayorDeEdad()==false) System.out.println("No es mayor de edad");
 		}
 
-	}
-
-	/**
-	 * Comprueba si la persona es mayor de edad
-	 * 
-	 * @param p : objeto persona
-	 */
-
-	private static void comprobarMayorEdad(Persona p) {
-		if (p.esMayorDeEdad()) {
-			System.out.println(p.getNombre() + " es mayor de edad.");
-		} else {
-			System.out.println(p.getNombre() + " no es mayor de edad.");
-		}
 	}
 
 }

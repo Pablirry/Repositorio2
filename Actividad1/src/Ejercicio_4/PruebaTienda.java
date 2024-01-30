@@ -10,25 +10,26 @@ public class PruebaTienda {
 
 		Tienda tienda = new Tienda("Tienda Cuántica", "Pepito Pérez", 123456, 5);
 
-        Computador computador1 = new Computador("Acer", 50, "Intel iCore 7", "Windows", 18500000);
-        Computador computador2 = new Computador("Toshiba", 80, "Intel iCore 5", "Windows", 15500000);
-        Computador computador3 = new Computador("Mac", 100, "Intel iCore 7", "Mac", 2500000);
+        Computador computador1 = new Computador("ACER", 50, "Intel iCore 7", "Windows", 18500000);
+        Computador computador2 = new Computador("TOSHIBA", 80, "Intel iCore 5", "Windows", 15500000);
+        Computador computador3 = new Computador("MAC", 100, "Intel iCore 7", "Mac", 2500000);
 
-        tienda.agregarComputador(computador1);
-        tienda.agregarComputador(computador2);
-        tienda.agregarComputador(computador3);
+        tienda.añadir(computador1);
+        tienda.añadir(computador2);
+        tienda.añadir(computador3);
 
-        System.out.println("Ingrese la marca del computador a buscar:");
-        String marca = sc.next();
+        System.out.println("Introduce la marca a buscar: ");
+        String marca = sc.next().toUpperCase();
 
-        int posicion = tienda.buscar(marca);
-        if (posicion != -1) {
-            System.out.println("El computador a buscar: " + marca + " se encuentra en la posición " + posicion);
-        } else {
-            System.out.println("No se encontró un computador con la marca proporcionada en la tienda.");
-        }
+        System.out.println("El computador a buscar: " + marca + " se encuentra en la posición " +  tienda.buscar(marca));
+        
 
+        tienda.imprimir(); 
+
+        tienda.eliminar(marca);
+        System.out.println("*****************************************");
         tienda.imprimir();
+
 	}
 
 }

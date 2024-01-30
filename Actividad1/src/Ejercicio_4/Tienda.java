@@ -1,6 +1,6 @@
 package Ejercicio_4;
 
-public class Tienda {
+public class Tienda{
 
     /*
      * Se requiere desarrollar un programa que modele una tienda de computadores.
@@ -17,59 +17,119 @@ public class Tienda {
      * • Listar la información de todos los computadores que tiene la tienda
      */
 
-    String nombre;
-    String propietario;
-    int identificadorTributario;
-    Computador[] inventario;
+    private String nombre;
+    private String propietario;
+    private int identificadorTributario;
+    Computador[] v;
+    private int numeroComputadores;
 
-    public Tienda(String nombre, String propietario, int identificadorTributario, int tamanoInventario) {
+    /**
+     * Constructor con todos los atributos
+     * 
+     * @param nombre
+     * @param propietario
+     * @param identificadorTributario
+     * @param tam
+     */
 
+    public Tienda(String nombre, String propietario, int identificadorTributario, int tam) {
         this.nombre = nombre;
         this.propietario = propietario;
         this.identificadorTributario = identificadorTributario;
-        this.inventario = new Computador[tamanoInventario];
+        v = new Computador[tam];
+        this.numeroComputadores = 0;
     }
 
-    public void agregarComputador(Computador c) {
-        for (int i = 0; i < inventario.length; i++) {
-            if (inventario[i] == null) {
-                inventario[i] = c;
-                System.out.println("Computador agregado a la tienda");
-                return;
-            }
+    /**
+     * Comprueba que el vector esta lleno
+     * 
+     * @return : boolean
+     */
+
+    public boolean tiendaLlena() {
+        if (numeroComputadores == v.length) {
+            return true;
+        } else {
+            return false;
         }
 
-        System.out.println("No hay espacio en el inventario");
     }
 
-    public void eliminarComputador(String marca) {
-        for (int i = 0; i < inventario.length; i++) {
-            if (inventario[i] != null && inventario[i].getMarca().equals(marca)) {
-                inventario[i] = null;
-                System.out.println("Computador eliminado de la tienda.");
-                return;
-            }
+    /**
+     * Comprueba que el vector esta vacio
+     * 
+     * @return : boolean
+     */
+
+    public boolean tiendaVacia() {
+
+        if (this.numeroComputadores == 0) {
+            return true;
+        } else {
+            return false;
         }
-
-        System.out.println("No se encontró un computador con la marca proporcionada");
     }
 
-    public int buscar(String marca) {
-        for (int i = 0; i < inventario.length; i++) {
-            if (inventario[i] != null && inventario[i].marca.equals(marca)) {
-                return i;
-            }
+    /**
+     * Añade un computador a la tienda
+     * 
+     * @param c
+     */
+
+    public void añadir(Computador c) {
+        if (this.tiendaLlena() == false) {
+            int posVacia = this.numeroComputadores;
+            v[posVacia] = c;
+            this.numeroComputadores++;
+        } else {
+            System.out.println("Error: La tienda esta llena");
         }
-        return -1; // Retorna -1 si no se encuentra la marca en el inventario.
     }
+
+    /**
+     * Imprime la información del vector
+     */
 
     public void imprimir() {
 
-        System.out.println("Ordenadores de la tienda");
-        for(Computador c : inventario) {
-            if(c!= null)
-            System.out.println(c);
+        String texto = "Tienda [nombre=" + nombre + ", propietario=" + propietario + ", identificadorTributario="
+                + identificadorTributario + ", numeroComputadores=" + numeroComputadores + "]";
+
+        for (int i = 0; i < this.numeroComputadores; i++) {
+            Computador c = v[i];
+            texto += "\t" + c.toString();
         }
 
+        System.out.println(texto);
+
+    }
+
+    /**
+     * Busca un computador en la tienda dada su marca
+     * @param marca : String
+     * @return : entero
+     */
+
+    public int buscar(String marca) {
+
+        for (int i = 0; i < this.numeroComputadores; i++) {
+            Computador c = v[i];
+            if (c.getMarca().compareTo(marca) == 0) {
+                return i;
+            }
+
+        }
+
+        return -1;
+    }
+
+    public void eliminar (String marca){
+        int pos = buscar(marca);
+        if(pos!=-1){
+            for(int i=pos;i<this.numeroComputadores-1;i++){
+                v[i]=v[i+1];
+            }
+            this.numeroComputadores--;
+        }
     }
 }

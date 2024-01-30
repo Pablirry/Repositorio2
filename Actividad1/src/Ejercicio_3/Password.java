@@ -101,7 +101,7 @@ public class Password {
      * Metodo toString de la clase Password
      */
     public String toString() {
-        return "Contraseña {longitud=" + longitud + ", contraseña=" + contraseña + "}";
+        return "Contraseña {longitud=" + longitud + ", contraseña= "+ contraseña + "}";
     }
 
     /**

@@ -24,4 +24,38 @@ public class Curso_universitario {
      * curso.
      */
 
+    private int cantidadEstudiantes;
+    Estudiante[] estudiantes;
+
+    public Curso_universitario(int tam) {
+        estudiantes = new Estudiante[tam];
+        this.cantidadEstudiantes = 0;
+    }
+
+    public boolean cursoLleno() {
+        if(cantidadEstudiantes == estudiantes.length){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean cursoVacio(){
+        if(this.cantidadEstudiantes==0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public void agregarEstudiante(Estudiante e) {
+        if(this.cursoLleno()==false){
+            int posVacia = this.cantidadEstudiantes;
+            estudiantes[posVacia] = e;
+            this.cantidadEstudiantes++;
+        }else{
+            System.out.println("El curso esta completo");;
+        }
+    }
+
 }

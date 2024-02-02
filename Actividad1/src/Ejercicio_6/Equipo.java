@@ -12,6 +12,7 @@ public class Equipo {
 
     /**
      * Conrtuctor con todos los atributos
+     * 
      * @param nombre
      * @param patrocinador
      * @param color1
@@ -78,18 +79,20 @@ public class Equipo {
 
         for (int i = 0; i < contParticipantes; i++) {
             Participante p = Participantes[i];
-            texto += "\n" + p.toString();
+            texto += "\n" +p.toString();
         }
         return texto;
     }
 
     public void añadirParticipante(Participante p) {
-        if (contParticipantes < 10) {
+        if (this.contParticipantes < Participantes.length) {
             Participantes[contParticipantes] = p;
             this.contParticipantes++;
         } else {
             System.out.println("No hay lugar para mas participantes");
         }
     }
+
+    
 
 }

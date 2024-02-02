@@ -24,7 +24,6 @@ public class PruebaCampeonato {
 		Participante p5 = new Participante("p5", "ape", 20, "dir", "XXX");
 		Participante p6 = new Participante("p6", "ape", 20, "dir", "XXX");
 
-
 		Equipo e = new Equipo("nom1", "pat", "azul", "rojo", "primera");
 
 		e.añadirParticipante(p1);
@@ -39,10 +38,21 @@ public class PruebaCampeonato {
 		e2.añadirParticipante(p5);
 		e2.añadirParticipante(p6);
 
+		
+
 		Partido p = new Partido("1-0", "camp1", "Pablo", e, e2);
+		Partido pa2 = new Partido("2-0", "camp4", "Juan", e, e2);
 
+		Campeonato c1 = new Campeonato();
+
+		c1.añadirPartido("1-0", "camp1", "Pablo", e, e2);
+		c1.añadirPartido("2-0", "camp4", "Juan", e, e2);
+
+		System.out.println("\n");
 		System.out.println(p.toString());
-
+		System.out.println("*********************************************************************");
+		System.err.println(pa2.toString());
+		
 
 	}
 

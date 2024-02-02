@@ -7,7 +7,7 @@ public class Participante {
     private int edad;
     private String direccion;
     private String telefono;
-    
+
     public Participante(String nombre, String apellidos, int edad, String direccion, String telefono) {
         this.nombre = nombre;
         this.apellidos = apellidos;

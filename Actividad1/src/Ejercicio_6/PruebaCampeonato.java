@@ -18,10 +18,32 @@ public class PruebaCampeonato {
 	public static void main(String[] args) {
 
 		Participante p1 = new Participante("p1", "ape", 20, "dir", "XXX");
-		for (int i = 1; i < 10; i++) {
-			String nombre = "p" + i;
+		Participante p2 = new Participante("p2", "ape", 20, "dir", "XXX");
+		Participante p3 = new Participante("p3", "ape", 20, "dir", "XXX");
+		Participante p4 = new Participante("p4", "ape", 20, "dir", "XXX");
+		Participante p5 = new Participante("p5", "ape", 20, "dir", "XXX");
+		Participante p6 = new Participante("p6", "ape", 20, "dir", "XXX");
 
-		}
+
+		Equipo e = new Equipo("nom1", "pat", "azul", "rojo", "primera");
+
+		e.añadirParticipante(p1);
+		e.añadirParticipante(p2);
+		e.añadirParticipante(p3);
+
+		
+
+		Equipo e2 = new Equipo("nom2", "pat", "azul", "rojo", "primera");
+
+		e2.añadirParticipante(p4);
+		e2.añadirParticipante(p5);
+		e2.añadirParticipante(p6);
+
+		Partido p = new Partido("1-0", "camp1", "Pablo", e, e2);
+
+		System.out.println(p.toString());
+
+
 	}
 
 }

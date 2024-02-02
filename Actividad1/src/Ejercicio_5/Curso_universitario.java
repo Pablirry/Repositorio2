@@ -24,38 +24,51 @@ public class Curso_universitario {
      * curso.
      */
 
-    private int cantidadEstudiantes;
-    Estudiante[] estudiantes;
+    private int contEstudiantes;
+    Estudiante[] v;
 
-    public Curso_universitario(int tam) {
-        estudiantes = new Estudiante[tam];
-        this.cantidadEstudiantes = 0;
+    /**
+     * Constructor curso universitario
+     */
+
+    public Curso_universitario() {
+        v = new Estudiante[10];
+        this.contEstudiantes = 0;
     }
 
-    public boolean cursoLleno() {
-        if(cantidadEstudiantes == estudiantes.length){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public boolean cursoVacio(){
-        if(this.cantidadEstudiantes==0){
-            return true;
-        }else{
-            return false;
-        }
-    }
+    /**
+     * Metodo que añade un estudiante al vector
+     * @param e
+     */
 
     public void agregarEstudiante(Estudiante e) {
-        if(this.cursoLleno()==false){
-            int posVacia = this.cantidadEstudiantes;
-            estudiantes[posVacia] = e;
-            this.cantidadEstudiantes++;
-        }else{
-            System.out.println("El curso esta completo");;
+        if (contEstudiantes < v.length) {
+            v[contEstudiantes] = e;
+            contEstudiantes++;
+        } else {
+            System.out.println("El estudiante " + (contEstudiantes + 1) + " no entra en el curso, está completo");
         }
     }
+
+    public void listarAlumnos(){
+        for(int i = 0;i<this.contEstudiantes;i++){
+            Estudiante e = v[i];
+            System.out.println(e.toString());
+        }
+    }
+
+    public void buscarAlumno(int codigo){
+        boolean encontrado = false;
+        for(int i = 0;i<this.contEstudiantes;i++){
+            Estudiante e = v[i];
+            if(e.getCodigo()==codigo){
+                System.out.println(e.toString());
+                encontrado = true;
+            }
+        
+        }
+        if(encontrado == false)
+        System.out.println("ERROR, estudiante no encontrado");
+        }
 
 }

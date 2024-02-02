@@ -86,7 +86,7 @@ public class Equipo {
     public void añadirParticipante(Participante p) {
         if (contParticipantes < 10) {
             Participantes[contParticipantes] = p;
-            contParticipantes++;
+            this.contParticipantes++;
         } else {
             System.out.println("No hay lugar para mas participantes");
         }

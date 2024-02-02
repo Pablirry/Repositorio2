@@ -73,7 +73,7 @@ public class Tienda{
     /**
      * Añade un computador a la tienda
      * 
-     * @param c
+     * @param c : Computador
      */
 
     public void añadir(Computador c) {
@@ -122,6 +122,11 @@ public class Tienda{
 
         return -1;
     }
+
+    /**
+     * Metodo que elimina un computador de la tienda dada su marca
+     * @param marca : String
+     */
 
     public void eliminar (String marca){
         int pos = buscar(marca);

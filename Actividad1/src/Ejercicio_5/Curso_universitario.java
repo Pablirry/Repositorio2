@@ -38,7 +38,7 @@ public class Curso_universitario {
 
     /**
      * Metodo que añade un estudiante al vector
-     * @param e
+     * @param e : Estudiante
      */
 
     public void agregarEstudiante(Estudiante e) {
@@ -50,12 +50,21 @@ public class Curso_universitario {
         }
     }
 
+    /**
+     * Metodo que lista los estudiantes del curso
+     */
+
     public void listarAlumnos(){
         for(int i = 0;i<this.contEstudiantes;i++){
             Estudiante e = v[i];
             System.out.println(e.toString());
         }
     }
+
+    /**
+     * Metodo que busca un alumno por su codigo
+     * @param codigo : entero
+     */
 
     public void buscarAlumno(int codigo){
         boolean encontrado = false;

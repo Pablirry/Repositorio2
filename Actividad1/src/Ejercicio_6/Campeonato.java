@@ -1,5 +1,7 @@
 package Ejercicio_6;
 
+import java.util.Arrays;
+
 public class Campeonato {
 
     private String nombre;
@@ -7,6 +9,7 @@ public class Campeonato {
     private String color1;
     private String color2;
     private String categoria;
+    private int contParticipantes;
     private Participante[] Participantes;
 
 
@@ -18,7 +21,7 @@ public class Campeonato {
         this.categoria = categoria;
 
         this.Participantes = new Participante[10];
-        int contParticipantes = 0;
+        contParticipantes = 0;
     }
 
 
@@ -70,5 +73,14 @@ public class Campeonato {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
+
+
+    @Override
+    public String toString() {
+        return "Campeonato [nombre=" + nombre + ", patrocinador=" + patrocinador + ", color1=" + color1 + ", color2="
+                + color2 + ", categoria=" + categoria + ", contParticipantes=" + contParticipantes + "]";
+    }
+
+    
 
 }

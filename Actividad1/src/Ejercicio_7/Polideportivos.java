@@ -67,4 +67,21 @@ public class Polideportivos {
         this.pistas = nuevoVector;
     }
 
+    public void eliminarPista (int pos){
+
+        int tamNuevo = pistas.length-1;
+
+        Pistas nuevoV[] = new Pistas[tamNuevo];
+
+        for(int i=0;i<pos;i++){
+            nuevoV[i] = pistas[i];
+        }
+
+        for(int i=pos;i<tamNuevo;i++){
+            nuevoV[i] = pistas[i+1];
+        }
+
+        this.pistas = nuevoV;
+}
+
 }

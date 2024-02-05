@@ -5,13 +5,13 @@ public class Polideportivos {
     private String nombre;
     private String direccion;
     private int extension;
-    private Pistas[] pistas;
+    private Pistas pistas[];
 
     public Polideportivos(String nombre, String direccion, int extension, int numPistas) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.extension = extension;
-        this.pistas = new Pistas[numPistas];
+        pistas = new Pistas[0];
     }
 
     public String getNombre() {
@@ -38,18 +38,33 @@ public class Polideportivos {
         this.extension = extension;
     }
 
-    public Pistas[] getPistas() {
-        return pistas;
+    @Override
+    public String toString() {
+        String texto = "Polideportivo [nombre=" + nombre + ", direccion=" + direccion + ", extension=" + extension + "]\n";
+
+        for (int i = 0; i < pistas.length; i++) {
+            texto += "\t" + pistas[i].toString()+ "\n";
+        }
+        return texto;
     }
 
-    public void setPistas(Pistas[] pistas) {
-        this.pistas = pistas;
+    public void añadirPista (int codigo, tipoPista tipo, boolean operativa, double precio, String fechaUltimaReserva){
+
+        Pistas pNueva = new Pistas(codigo, tipo, operativa, precio, fechaUltimaReserva);
+        
+        int tam = pistas.length;
+        int nuevoTam = pistas.length+1;
+
+        Pistas nuevoVector[] = new Pistas[nuevoTam];
+
+        for(int i=0;i<tam;i++){
+            nuevoVector[i] = pistas[i];
+        }
+
+        int posNuevo = nuevoTam-1;
+        nuevoVector[posNuevo] = pNueva;
+
+        this.pistas = nuevoVector;
     }
-
-    
-
-    
-
-
 
 }

@@ -76,12 +76,4 @@ public class Usuarios {
                 + ", dni=" + dni + ", fechaNacimiento=" + fechaNacimiento + "]";
     }
 
-    public String añadirUsuario() {
-        return "Usuario: " + nombre + " " + apellidos +
-                "\nEmail: " + email +
-                "\nTeléfono: " + telefono +
-                "\nDNI: " + dni +
-                "\nFecha de Nacimiento: " + fechaNacimiento;
-    }
-
 }

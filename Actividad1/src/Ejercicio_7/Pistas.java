@@ -2,33 +2,33 @@ package Ejercicio_7;
 
 public class Pistas {
 
-    private String codigo;
-    private String tipo;
+    private int codigo;
+    private tipoPista tipo;
     private boolean operativa;
     private double precio;
-    private String ultimaReserva;
-    
-    public Pistas(String codigo, String tipo, boolean operativa, double precio, String ultimaReserva) {
+    private String fechaUltimaReserva;
+
+    public Pistas(int codigo, tipoPista tipo, boolean operativa, double precio, String fechaUltimaReserva) {
         this.codigo = codigo;
         this.tipo = tipo;
         this.operativa = operativa;
         this.precio = precio;
-        this.ultimaReserva = ultimaReserva;
+        this.fechaUltimaReserva = fechaUltimaReserva;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
-    public String getTipo() {
+    public tipoPista getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(tipoPista tipo) {
         this.tipo = tipo;
     }
 
@@ -48,19 +48,18 @@ public class Pistas {
         this.precio = precio;
     }
 
-    public String getUltimaReserva() {
-        return ultimaReserva;
+    public String getFechaUltimaReserva() {
+        return fechaUltimaReserva;
     }
 
-    public void setUltimaReserva(String ultimaReserva) {
-        this.ultimaReserva = ultimaReserva;
+    public void setFechaUltimaReserva(String fechaUltimaReserva) {
+        this.fechaUltimaReserva = fechaUltimaReserva;
     }
 
+    @Override
     public String toString() {
         return "Pistas [codigo=" + codigo + ", tipo=" + tipo + ", operativa=" + operativa + ", precio=" + precio
-                + ", ultimaReserva=" + ultimaReserva + "]";
+                + ", fechaUltimaReserva=" + fechaUltimaReserva + "]";
     }
-
-    
 
 }

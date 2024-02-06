@@ -7,7 +7,16 @@ public class Pistas {
     private boolean operativa;
     private double precio;
     private String fechaUltimaReserva;
-    public double length;
+
+    /**
+     * Constructor con todos los atributos
+     * 
+     * @param codigo             : entero
+     * @param tipo               : tipoPista
+     * @param operativa          : boolean
+     * @param precio             : double
+     * @param fechaUltimaReserva : String
+     */
 
     public Pistas(int codigo, tipoPista tipo, boolean operativa, double precio, String fechaUltimaReserva) {
         this.codigo = codigo;
@@ -17,55 +26,110 @@ public class Pistas {
         this.fechaUltimaReserva = fechaUltimaReserva;
     }
 
+    /**
+     * Metodo get del atributo codigo
+     * 
+     * @return : entero
+     */
+
     public int getCodigo() {
         return codigo;
     }
+
+    /**
+     * Metodo set del atributo codigo
+     * 
+     * @param codigo : entero
+     */
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
+    /**
+     * Metodo get del atributo tipo
+     * 
+     * @return : tipoPista
+     */
+
     public tipoPista getTipo() {
         return tipo;
     }
+
+    /**
+     * Metodo set del atributo tipo
+     * 
+     * @param tipo : tipoPista
+     */
 
     public void setTipo(tipoPista tipo) {
         this.tipo = tipo;
     }
 
+    /**
+     * Metodo get del atributo operativa
+     * 
+     * @return : boolean
+     */
+
     public boolean isOperativa() {
         return operativa;
     }
+
+    /**
+     * Metodo set del atributo operativa
+     * 
+     * @param operativa : boolean
+     */
 
     public void setOperativa(boolean operativa) {
         this.operativa = operativa;
     }
 
+    /**
+     * Metodo get del atributo precio
+     * 
+     * @return : double
+     */
+
     public double getPrecio() {
         return precio;
     }
+
+    /**
+     * Metodo set del atributo precio
+     * 
+     * @param precio : double
+     */
 
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
+    /**
+     * Metodo get del atributo fechaUltimaReserva
+     * 
+     * @return : String
+     */
+
     public String getFechaUltimaReserva() {
         return fechaUltimaReserva;
     }
 
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
+    /**
+     * Metodo set del atributo fechaUltimaReserva
+     * 
+     * @param fechaUltimaReserva : String
+     */
 
     public void setFechaUltimaReserva(String fechaUltimaReserva) {
         this.fechaUltimaReserva = fechaUltimaReserva;
     }
 
-    @Override
+    /**
+     * Metodo toString de la clase Pistas
+     */
+
     public String toString() {
         return "Pistas [codigo=" + codigo + ", tipo=" + tipo + ", operativa=" + operativa + ", precio=" + precio
                 + ", fechaUltimaReserva=" + fechaUltimaReserva + "]";

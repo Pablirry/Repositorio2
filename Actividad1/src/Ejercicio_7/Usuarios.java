@@ -15,11 +15,12 @@ public class Usuarios {
 
     /**
      * Constructor con todos los atributos
-     * @param nombre : String
-     * @param apellidos : String
-     * @param email : String
-     * @param telefono : String
-     * @param dni : String
+     * 
+     * @param nombre          : String
+     * @param apellidos       : String
+     * @param email           : String
+     * @param telefono        : String
+     * @param dni             : String
      * @param fechaNacimiento : String
      */
 
@@ -35,6 +36,7 @@ public class Usuarios {
 
     /**
      * Metodo get del atributo nombre
+     * 
      * @return : String
      */
 
@@ -44,6 +46,7 @@ public class Usuarios {
 
     /**
      * Metodo set del atributo nombre
+     * 
      * @param nombre : String
      */
 
@@ -53,6 +56,7 @@ public class Usuarios {
 
     /**
      * Metodo get del atributo apellidos
+     * 
      * @return : String
      */
 
@@ -62,6 +66,7 @@ public class Usuarios {
 
     /**
      * Metodo set del atributo apellidos
+     * 
      * @param apellidos : String
      */
 
@@ -71,6 +76,7 @@ public class Usuarios {
 
     /**
      * Metodo get del atributo email
+     * 
      * @return : String
      */
 
@@ -80,6 +86,7 @@ public class Usuarios {
 
     /**
      * Metodo set del atributo email
+     * 
      * @param email : String
      */
 
@@ -89,6 +96,7 @@ public class Usuarios {
 
     /**
      * Metodo get del atributo telefono
+     * 
      * @return : String
      */
 
@@ -98,6 +106,7 @@ public class Usuarios {
 
     /**
      * Metodo set del atributo telefono
+     * 
      * @param telefono : String
      */
 
@@ -107,6 +116,7 @@ public class Usuarios {
 
     /**
      * Metodo get del atributo dni
+     * 
      * @return : String
      */
 
@@ -116,6 +126,7 @@ public class Usuarios {
 
     /**
      * Metodo set del atributo dni
+     * 
      * @param dni : String
      */
 
@@ -125,6 +136,7 @@ public class Usuarios {
 
     /**
      * Metodo get del atributo fechaNacimiento
+     * 
      * @return : String
      */
 
@@ -134,6 +146,7 @@ public class Usuarios {
 
     /**
      * Metodo set del atributo fechaNacimiento
+     * 
      * @param fechaNacimiento : String
      */
 
@@ -146,7 +159,8 @@ public class Usuarios {
      */
 
     public String toString() {
-        return "\n\tUsuarios [nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email + ", telefono=" + telefono
+        return "\n\tUsuarios [nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email + ", telefono="
+                + telefono
                 + ", dni=" + dni + ", fechaNacimiento=" + fechaNacimiento + "]";
     }
 

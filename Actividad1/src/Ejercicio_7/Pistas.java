@@ -7,6 +7,7 @@ public class Pistas {
     private boolean operativa;
     private double precio;
     private String fechaUltimaReserva;
+    public double length;
 
     public Pistas(int codigo, tipoPista tipo, boolean operativa, double precio, String fechaUltimaReserva) {
         this.codigo = codigo;
@@ -50,6 +51,14 @@ public class Pistas {
 
     public String getFechaUltimaReserva() {
         return fechaUltimaReserva;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
     }
 
     public void setFechaUltimaReserva(String fechaUltimaReserva) {

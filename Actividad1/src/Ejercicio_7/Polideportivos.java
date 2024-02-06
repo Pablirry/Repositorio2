@@ -84,4 +84,15 @@ public class Polideportivos {
         this.pistas = nuevoV;
 }
 
+public Pistas getPista(int pos){
+    if(pos<=0 && pos<pistas.length){
+        return pistas[pos];
+    }
+    else{
+        return null;
+
+    }
+
+}
+
 }

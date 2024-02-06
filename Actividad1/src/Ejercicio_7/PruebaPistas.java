@@ -6,19 +6,24 @@ public class PruebaPistas {
 
         Polideportivos poli = new Polideportivos("nombrePoli", "General Elorza", 25, 4);
 
-        Polideportivos poli2 = new Polideportivos("nombrePoli2", "General Zubillaga", 40, 9);
-
-        poli.añadirPista(125689, tipoPista.TENIS,true, 10, "10/11/2024");
-        poli.añadirPista(125478, tipoPista.FUTBOL, true, 30, "12/12/2024");
-
-        poli2.añadirPista(125689, tipoPista.TENIS,true, 10, "10/11/2024");
-        poli2.añadirPista(405698, tipoPista.BALONCESTO, true, 20, "18/11/2024");
-
-        System.out.println("Polideportivo 1:\n" + poli.toString());
-
-        System.out.println("Polideportivo 2:\n" + poli2.toString());
+        poli.añadirPista(1, tipoPista.FUTBOL, true, 100, "10/01/2024");
+        poli.añadirPista(2, tipoPista.TENIS, true, 120, "01/02/2024");
+        poli.añadirPista(3, tipoPista.PADEL, true, 150, "10/12/2023");
+        poli.añadirPista(4, tipoPista.BALONCESTO, true, 110, "10/01/2024");
 		
-		
+		System.out.println(poli.toString());
+
+        Usuarios u1 = new Usuarios("u1", "ape", "u1@gmail.com", "XXX", "XXX", "10/10/2002");
+        Usuarios u2 = new Usuarios("u2", "ape2", "u2@gmail.com", "XXX", "XXX", "10/09/2002");
+        Usuarios u3 = new Usuarios("u3", "ape3", "u3@gmail.com", "XXX", "XXX", "08/12/2002");
+
+        Pistas p0 = poli.getPista(0);
+        Reserva r1 = new Reserva("XXX", "XXX", p0);
+        r1.añadirUsuario(u1);
+        r1.añadirUsuario(u2);
+        r1.añadirUsuario(u3);
+        System.out.println(r1.toString());
+        
     }
 
 	}

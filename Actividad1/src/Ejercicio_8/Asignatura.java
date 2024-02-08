@@ -1,7 +1,7 @@
 package Ejercicio_8;
 
 public class Asignatura {
-    
+
     private String nombre;
     private int numHoras;
     private Profesor profesor;
@@ -21,10 +21,10 @@ public class Asignatura {
     public String toString() {
         String texto = "Asignatura [nombre=" + nombre + ", numHoras=" + numHoras + "]\n";
 
-        if(profesor!= null) {
+        if (profesor != null) {
             texto += "\t" + profesor.getNombre() + "\n";
-    }else{
-        texto += "\tSin profesor";
+        } else {
+            texto += "\tSin profesor";
         }
 
         return texto;

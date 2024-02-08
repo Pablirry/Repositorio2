@@ -55,6 +55,6 @@ public class MatriculaAsignatura {
     @Override
     public String toString() {
         return "MatriculaAsignatura [matricula=" + matricula + ", asignatura=" + asignatura.getNombre() + "]";
-    }    
+    }
 
 }

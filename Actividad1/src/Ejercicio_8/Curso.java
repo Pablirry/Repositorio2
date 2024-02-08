@@ -57,22 +57,21 @@ public class Curso {
 
     @Override
     public String toString() {
-        String texto = "Curso [codigo=" + codigo + ", nombre=" + nombre + ", aula=" + aula + ", horario=" + horario + "]\n";
+        String texto = "Curso [codigo=" + codigo + ", nombre=" + nombre + ", aula=" + aula + ", horario=" + horario
+                + "]\n";
 
-        if(asignaturas != null && asignaturas.length > 0) {
+        if (asignaturas != null && asignaturas.length > 0) {
 
             texto += "Asignaturas:\n";
-            for(int i = 0; i<asignaturas.length;i++){
+            for (int i = 0; i < asignaturas.length; i++) {
                 texto += "\t" + asignaturas[i].getNombre() + "\n";
             }
-    }else{
-        texto += "\tSin asignaturas";
+        } else {
+            texto += "\tSin asignaturas";
+        }
+
+        return texto;
+
     }
-
-    return texto;
-    
-} 
-
-    
 
 }

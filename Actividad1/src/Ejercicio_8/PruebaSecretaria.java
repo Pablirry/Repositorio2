@@ -4,17 +4,19 @@ public class PruebaSecretaria {
 
 	public static void main(String[] args) {
 
-		Alumno a1 = new Alumno("12345678A", 12345678, "Pepe", "García", "Calle Falsa 123", "66666666", "pepe@gmail.com");
+		Alumno a1 = new Alumno("12345678A", 12345678, "Pepe", "García", "Calle Falsa 123", "66666666",
+				"pepe@gmail.com");
 		System.out.println(a1.toString());
-		
-		Alumno a2 = new Alumno("36346578A", 22434434, "Pedro", "García", "Calle Falsa 3", "777777777", "pedro@gmail.com");
+
+		Alumno a2 = new Alumno("36346578A", 22434434, "Pedro", "García", "Calle Falsa 3", "777777777",
+				"pedro@gmail.com");
 		System.out.println(a2.toString());
 
 		a1.añadirCompanero(a2);
 		a2.añadirCompanero(a1);
 
 		System.out.println("Después de añadir compañero:");
-    	System.out.println(a1.toString());
+		System.out.println(a1.toString());
 
 		Profesor p1 = new Profesor("prof1", "ape1", "null", "null");
 		Profesor p2 = new Profesor("prof2", "ape2", "null", "null");
@@ -43,9 +45,6 @@ public class PruebaSecretaria {
 
 		System.out.println(m1.toString());
 
-
-		
-		
 	}
 
 }

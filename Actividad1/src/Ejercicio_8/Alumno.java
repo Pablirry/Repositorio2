@@ -1,9 +1,9 @@
 package Ejercicio_8;
 
 public class Alumno {
-	
+
 	// DNI, número de expediente, nombre, apellidos, domicilio, teléfono y e-mail
-	
+
 	private String DNI;
 	private int n_expediente;
 	private String nombre;
@@ -23,7 +23,7 @@ public class Alumno {
 		this.domicilio = domicilio;
 		this.telefono = telefono;
 		this.email = email;
-		
+
 	}
 
 	public String getDNI() {
@@ -82,22 +82,21 @@ public class Alumno {
 		this.email = email;
 	}
 
-
 	@Override
 	public String toString() {
-		String texto = "Alumno [DNI=" + DNI 
-		+ ", n_expediente=" + n_expediente 
-		+ ", nombre=" + nombre 
-		+ ", apellidos=" + apellidos 
-		+ ", domicilio=" + domicilio 
-		+ ", telefono=" + telefono 
-		+ ", email=" + email + "]\n";
+		String texto = "Alumno [DNI=" + DNI
+				+ ", n_expediente=" + n_expediente
+				+ ", nombre=" + nombre
+				+ ", apellidos=" + apellidos
+				+ ", domicilio=" + domicilio
+				+ ", telefono=" + telefono
+				+ ", email=" + email + "]\n";
 
-		if(companero!=null){
-			texto += "Compañero con dni: " + companero.getDNI()+"\n";
-	}else{
-		texto += "No tiene compañero";
-	}
+		if (companero != null) {
+			texto += "Compañero con dni: " + companero.getDNI() + "\n";
+		} else {
+			texto += "No tiene compañero";
+		}
 
 		return texto;
 	}

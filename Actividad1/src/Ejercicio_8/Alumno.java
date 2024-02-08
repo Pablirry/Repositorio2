@@ -12,6 +12,8 @@ public class Alumno {
 	private String telefono;
 	private String email;
 
+	private Alumno companero;
+
 	public Alumno(String dNI, int n_expediente, String nombre, String apellidos, String domicilio, String telefono,
 			String email) {
 		DNI = dNI;
@@ -21,6 +23,7 @@ public class Alumno {
 		this.domicilio = domicilio;
 		this.telefono = telefono;
 		this.email = email;
+		
 	}
 
 	public String getDNI() {
@@ -79,12 +82,27 @@ public class Alumno {
 		this.email = email;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Alumno [DNI=" + DNI + ", n_expediente=" + n_expediente + ", nombre=" + nombre + ", apellidos="
-				+ apellidos + ", domicilio=" + domicilio + ", telefono=" + telefono + ", email=" + email + "]";
+		String texto = "Alumno [DNI=" + DNI 
+		+ ", n_expediente=" + n_expediente 
+		+ ", nombre=" + nombre 
+		+ ", apellidos=" + apellidos 
+		+ ", domicilio=" + domicilio 
+		+ ", telefono=" + telefono 
+		+ ", email=" + email + "]\n";
+
+		if(companero!=null){
+			texto += "Compañero con dni: " + companero.getDNI()+"\n";
+	}else{
+		texto += "No tiene compañero";
 	}
 
-	
+		return texto;
+	}
 
+	public void añadirCompanero(Alumno a) {
+		this.companero = a;
+	}
 }

@@ -1,5 +1,5 @@
 package Ejercicio_9;
 
-public class Hotel {
+public class Empleado {
 
 }

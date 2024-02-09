@@ -13,7 +13,7 @@ public class PruebaElectrodomesticos {
         Electrodomesticos e4 = new Electrodomesticos("E003", "Televisor", "Sony", 899.99, true);
 
         tienda.nuevoElectrodomestico(e1);
-        tienda.nuevoElectrodomestico(e2);
+        tienda.nuevoElectrodomestico(e2);3
         tienda.nuevoElectrodomestico(e3);
         tienda.nuevoElectrodomestico(e4);
 

@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Hotel {
 
-    static Scanner sc = new Scanner(System.in);
-
+    private static final Scanner sc = new Scanner(System.in);
     private Habitacion[] habitaciones;
 
     /**
@@ -105,11 +104,13 @@ public class Hotel {
      * @return : entero
      */
 
-    private int buscarHabitacion(int id) {
-        for (int i = 0; i < habitaciones.length; i++) {
-            if (habitaciones[i] != null && habitaciones[i].getId() == id) {
+    public int buscarHabitacion(int id) {
+        int i = 0;
+        for (Habitacion habitacion : habitaciones) {
+            if (habitacion != null && habitacion.getId() == id) {
                 return i;
             }
+            i++;
         }
         return -1;
     }

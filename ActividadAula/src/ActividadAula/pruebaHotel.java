@@ -23,7 +23,7 @@ public class pruebaHotel {
 
         hotel.mostrarHabitaciones();
 
-        hotel.borrarHabitacion(5);
+        hotel.borrarHabitacion(6);
 
         hotel.mostrarHabitacionesDisponibles();
 

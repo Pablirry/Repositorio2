@@ -20,7 +20,6 @@ public class pruebaHotel {
         hotel.nuevaHabitacion(new Habitacion(8, 2, tipoHabitacion.ESPECIAL, 300.00, true, true));
         hotel.nuevaHabitacion(new Habitacion(9, 3, tipoHabitacion.SIMPLE, 100.00, false, false));
         hotel.nuevaHabitacion(new Habitacion(10, 3, tipoHabitacion.DOBLE, 150.00, false, true));
-        hotel.nuevaHabitacion(new Habitacion(11, 0, null, 0, false, false));
 
         hotel.mostrarHabitaciones();
 

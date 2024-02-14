@@ -165,36 +165,4 @@ public class Habitacion {
         return "Habitacion [id=" + id + ", planta=" + planta + ", tipo=" + tipo + ", precio=" + precio + ", ocupado="
                 + ocupado + ", tieneVistaExterior=" + tieneVistaExterior + ", Localizacion: " + localizacion() + "]";
     }
-
-    @Override
-    public boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (obj == null)
-      return false;
-    if (getClass() != obj.getClass())
-      return false;
-    Habitacion other = (Habitacion) obj;
-    if (id != other.id)
-      return false;
-    if (ocupado != other.ocupado)
-      return false;
-    if (planta != other.planta)
-      return false;
-    if (precio != other.precio)
-      return false;
-
-      return true;
-    }
-
-    @Override
-    public int hashCode() {
-        // TODO Auto-generated method stub
-        return super.hashCode();
-    }
-
-    
-
-
-
 }

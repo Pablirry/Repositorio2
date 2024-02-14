@@ -163,7 +163,7 @@ public class Habitacion {
     @Override
     public String toString() {
         return "Habitacion [id=" + id + ", planta=" + planta + ", tipo=" + tipo + ", precio=" + precio + ", ocupado="
-                + ocupado + ", tieneVistaExterior=" + tieneVistaExterior + "Localizacion: " + localizacion() + "]";
+                + ocupado + ", tieneVistaExterior=" + tieneVistaExterior + ", Localizacion: " + localizacion() + "]";
     }
 
 }

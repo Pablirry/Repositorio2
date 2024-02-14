@@ -12,14 +12,15 @@ public class pruebaHotel {
 
         hotel.nuevaHabitacion(new Habitacion(1, 1, tipoHabitacion.SIMPLE, 100.00, false, true));
         hotel.nuevaHabitacion(new Habitacion(2, 2, tipoHabitacion.DOBLE, 150.00, false, true));
-        hotel.nuevaHabitacion(new Habitacion(3, 3, tipoHabitacion.MATRIMONIAL, 200.00, false, false));
-        hotel.nuevaHabitacion(new Habitacion(4, 4, tipoHabitacion.ESPECIAL, 300.00, false, true));
-        hotel.nuevaHabitacion(new Habitacion(5, 5, tipoHabitacion.SIMPLE, 100.00, true, true));
-        hotel.nuevaHabitacion(new Habitacion(6, 6, tipoHabitacion.DOBLE, 150.00, false, false));
-        hotel.nuevaHabitacion(new Habitacion(7, 7, tipoHabitacion.MATRIMONIAL, 200.00, false, true));
-        hotel.nuevaHabitacion(new Habitacion(8, 8, tipoHabitacion.ESPECIAL, 300.00, true, true));
-        hotel.nuevaHabitacion(new Habitacion(9, 9, tipoHabitacion.SIMPLE, 100.00, false, false));
-        hotel.nuevaHabitacion(new Habitacion(10, 10, tipoHabitacion.DOBLE, 150.00, false, true));
+        hotel.nuevaHabitacion(new Habitacion(3, 1, tipoHabitacion.MATRIMONIAL, 200.00, false, false));
+        hotel.nuevaHabitacion(new Habitacion(4, 1, tipoHabitacion.ESPECIAL, 300.00, false, true));
+        hotel.nuevaHabitacion(new Habitacion(5, 2, tipoHabitacion.SIMPLE, 100.00, true, true));
+        hotel.nuevaHabitacion(new Habitacion(6, 1, tipoHabitacion.DOBLE, 150.00, false, false));
+        hotel.nuevaHabitacion(new Habitacion(7, 3, tipoHabitacion.MATRIMONIAL, 200.00, false, true));
+        hotel.nuevaHabitacion(new Habitacion(8, 2, tipoHabitacion.ESPECIAL, 300.00, true, true));
+        hotel.nuevaHabitacion(new Habitacion(9, 3, tipoHabitacion.SIMPLE, 100.00, false, false));
+        hotel.nuevaHabitacion(new Habitacion(10, 3, tipoHabitacion.DOBLE, 150.00, false, true));
+        hotel.nuevaHabitacion(new Habitacion(11, 0, null, 0, false, false));
 
         hotel.mostrarHabitaciones();
 

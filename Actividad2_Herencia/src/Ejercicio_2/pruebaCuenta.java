@@ -11,6 +11,7 @@ public class pruebaCuenta {
         c1.estractoMensual();
         System.out.println("Despues de aplicar estracto mensual");
         System.out.println(c1.toString());
+        
 
     }
 

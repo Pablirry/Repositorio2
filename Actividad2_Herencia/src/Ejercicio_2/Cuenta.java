@@ -30,6 +30,7 @@ public class Cuenta {
 
     public void consignar(float cantidad) {
         this.saldo = cantidad;
+        this.numConsignaciones++;
     }
 
     /**
@@ -40,7 +41,9 @@ public class Cuenta {
     public void retirar(float cantidad) {
         if (cantidad <= this.saldo) {
             saldo -= cantidad;
+            this.numeroRetiros++;
         }
+        
     }
 
     /**

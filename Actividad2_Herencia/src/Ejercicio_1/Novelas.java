@@ -17,6 +17,11 @@ public class Novelas extends Libro {
         Tipo = tipo;
     }
 
+	@Override
+	public String toString() {
+		return "Novelas [titulo=" + titulo + ", autor=" + autor + ", precio=" + precio + "]";
+	}
+
     
     
 

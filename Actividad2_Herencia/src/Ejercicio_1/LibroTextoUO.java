@@ -19,7 +19,9 @@ public class LibroTextoUO extends LibroTexto {
 
     @Override
     public String toString() {
-        return "LibroTextoUO [facultad=" + facultad + "]";
+        return "LibroTextoUO [facultad=" + facultad + ", titulo=" + titulo + ", autor=" + autor + ", precio=" + precio + ", curso=" + curso + "]";
     }
+
+    
 
 }

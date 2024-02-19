@@ -4,17 +4,20 @@ public class testLibros {
 
 	public static void main(String[] args) {
 		
-		Libro Libro = new Libro("XXX", "XXX");
+		Libro L1 = new Libro("Libro1", "XXX");
+        L1.setPrecio(200);
+        
+        System.out.println(L1.toString());
+        System.out.println("Precio con 12%: " +L1.precioConIva(12));
 
-        LibroTexto LibroTexto = new LibroTexto("XXX", "XXX", 1);
+        LibroTexto Lt1= new LibroTexto("LTexto1", "XXX", 4);
+        Lt1.setPrecio(200);
+        System.out.println("Precio con 12%: " +Lt1.precioConIva(12));
 
-        LibroTextoUO LibroTextoUO = new LibroTextoUO("XXX", "XXX", 1, "Universidad de Oviedo");
+        LibroTextoUO Lt1UO = new LibroTextoUO("LTexto1UO", "XXX", 4, "Facultad de Informatica");
+        Lt1UO.setPrecio(200);
+        System.out.println("Precio con 12%: " +Lt1UO.precioConIva(12));
 
-        System.out.println(Libro.toString());
-
-        System.out.println(LibroTexto.toString());
-
-        System.out.println(LibroTextoUO.toString());
 
 	}
 

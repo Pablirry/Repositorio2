@@ -41,10 +41,9 @@ public class Libro {
         return "Libro [titulo=" + titulo + ", autor=" + autor + ", precio=" + precio + "]";
     }
 
-    public double precioConIva(int iva){
+    public double precioConIva(double iva){
 
-        return (iva/100)*precio;
-        
+        return precio+precio*(iva/100);
     }
 
     

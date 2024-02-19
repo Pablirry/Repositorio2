@@ -43,7 +43,7 @@ public class Libro {
 
     public double precioConIva(int iva){
 
-        return this.precio * (1 + iva / 100);
+        return (iva/100)*precio;
         
     }
 

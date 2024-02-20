@@ -25,7 +25,6 @@ public class cuentaAhorro extends Cuenta {
             super.consignar(cantidad);
         } else {
             System.out.println("La cuenta no esta activa");
-            ;
         }
     }
 
@@ -52,26 +51,33 @@ public class cuentaAhorro extends Cuenta {
      */
 
     public void estractoMensual() {
-        super.estractoMensual();
+
         if (numeroRetiros > 4) {
-            saldo = saldo - 1000;
+            int excesoRetiros = numeroRetiros - 4;
+            setComision(excesoRetiros * 1000);
+        }else{
+            setComision(0);
         }
+        super.estractoMensual();
 
         if (saldo < 10000) {
             estaActiva = false;
+        }else{
+            estaActiva = true;
         }
     }
 
     /**
-     * muestra en pantalla el saldo de la cuenta, la comisión mensual y el número de transacciones realizadas (suma de cantidad de consignaciones y retiros).
+     * muestra en pantalla el saldo de la cuenta, la comisión mensual y el número de
+     * transacciones realizadas (suma de cantidad de consignaciones y retiros).
      */
 
-    public void imprimir(){
+    public void imprimir() {
 
-        System.out.println("Saldo: "+saldo);
-        System.out.println("Comision: "+comision);
-        int nTransacciones = this.numConsignaciones+this.numeroRetiros;
-        System.out.println("Numero de transacciones: "+ nTransacciones);
+        System.out.println("Saldo: " + this.saldo);
+        System.out.println("Comision: " + this.comision);
+        int nTransacciones = this.numConsignaciones + this.numeroRetiros;
+        System.out.println("Numero de transacciones: " + nTransacciones);
 
     }
 

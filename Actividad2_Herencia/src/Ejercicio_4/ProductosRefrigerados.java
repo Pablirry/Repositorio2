@@ -57,7 +57,7 @@ public class ProductosRefrigerados extends Productos {
 
     public void mostrarInformacion() {
         super.mostrarInformacion();
-        System.out.println("codigoSupervision" + codigoSupervision);
+        System.out.println("codigoSupervision: " + codigoSupervision);
         System.out.println("Fecha de envasado: " + fechaEnvasado);
         System.out.println("Temperatura recomendada: " + temperaturaRecomendada);
         System.out.println("Pais de origen: " + paisOrigen);

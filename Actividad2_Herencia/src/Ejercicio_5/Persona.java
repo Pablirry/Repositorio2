@@ -31,7 +31,7 @@ public class Persona implements Humano {
 
     @Override
     public String toString() {
-        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", direccion=" + direccion
+        return "Persona [nombre = " + nombre + ", apellidos = " + apellidos + ", NIF = " + NIF + ", direccion = " + direccion.toString()
                 + "]";
     }
 }

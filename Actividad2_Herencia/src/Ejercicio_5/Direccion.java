@@ -50,4 +50,11 @@ public class Direccion {
         this.pais = pais;
     }
 
+    @Override
+    public String toString() {
+        return calle + "," + ciudad + ", CP: " + codigoPostal + "," + pais;
+    }
+
+    
+
 }

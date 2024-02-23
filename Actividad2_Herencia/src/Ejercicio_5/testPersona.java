@@ -28,7 +28,7 @@ public class testPersona {
 
         for (Persona persona : listaPersonas) {
             System.out.println(persona.toString());
-            persona.identificate(); 
+            persona.identificate (); 
             System.out.println();
         }
     }

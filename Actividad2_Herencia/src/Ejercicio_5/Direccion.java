@@ -3,6 +3,7 @@ package Ejercicio_5;
 public class Direccion {
 
     // calle, ciudad, código postal, pais
+	
     protected String calle;
     protected String ciudad;
     protected String codigoPostal;

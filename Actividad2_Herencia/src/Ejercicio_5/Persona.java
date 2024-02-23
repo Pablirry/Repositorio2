@@ -26,7 +26,7 @@ public class Persona implements Humano {
 
     @Override
     public void identificate() {
-        System.out.println("Soy una persona");
+        System.out.println("Persona");
     }
 
     @Override

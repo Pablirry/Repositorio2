@@ -1,5 +1,6 @@
-package Ejercicio_3;
-public class Empleado {
+package Ejercicio_3D;
+
+public abstract class Empleado {
 
     private String nombre;
 	
@@ -22,8 +23,5 @@ public class Empleado {
 		this.nombre = nombre;
 	}
 	
-	
-	public String datos() {
-		return "Empleado "+nombre;
-	}	
+    public abstract void categoria();
 }

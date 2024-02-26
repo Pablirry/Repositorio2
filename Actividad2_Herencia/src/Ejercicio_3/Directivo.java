@@ -6,9 +6,8 @@ public class Directivo extends Empleado {
         super(nombre);
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + " --> Directivo";
+    public String datos() {
+        return super.datos() + " --> Directivo";
     }
 
     

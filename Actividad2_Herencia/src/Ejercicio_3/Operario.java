@@ -6,9 +6,4 @@ public class Operario extends Empleado {
         super(nombre);
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + " --> Operario";
-    }
-
 }

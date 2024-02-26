@@ -1,15 +1,33 @@
 package Ejercicio_3D;
 
+/**
+ * 
+ */
 public class Directivo extends Empleado {
 
-    public Directivo(String nombre) {
+	/**
+	 * 
+	 */
+	public Directivo() {
+
+	}
+
+	/**
+	 * @param nombre
+	 */
+	public Directivo(String nombre) {
 		super(nombre);
+
+	}
+
+	public void mostrarDatos(){
+		System.out.println(nombre + " --> Directivo");
 	}
 
 	@Override
 	public void categoria() {
-		
-		System.out.println("Categoria Directivo "+getNombre());
-	}
-}
+		System.out.println(nombre + " --> Categoria : Directivo");
 
+	}
+
+}

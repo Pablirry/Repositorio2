@@ -14,6 +14,7 @@ public abstract class Empleado {
 
 	/**
 	 * Contructor de la clase Empleado
+	 * 
 	 * @param nombre : String
 	 */
 
@@ -30,6 +31,7 @@ public abstract class Empleado {
 
 	/**
 	 * Metodo set del atributo nombre
+	 * 
 	 * @param nombre : String
 	 */
 	public void setNombre(String nombre) {

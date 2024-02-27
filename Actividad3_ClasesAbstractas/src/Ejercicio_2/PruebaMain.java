@@ -7,13 +7,17 @@ public class PruebaMain {
 		Persona p = new Persona("Juan", "Perez", "12345678A");
 		
 
-		CuentaCorriente c = new CuentaCorriente(p, 999555555999l);
-		System.out.println(c.toString());
-
-		c.ingresar(100);
-		c.retirar(200);
-		c.actualizarSaldo();
-		System.out.println(c.toString());
+		CuentaAhorro ca = new CuentaAhorro(p, 1111, 2.5, 600);
+		System.out.println(ca.toString());
+		ca.ingresar(1000);
+		System.out.println("Ingresamos 1000");
+		System.out.println(ca.toString());
+		ca.retirar(900);
+		System.out.println("Retiramos 100");
+		System.out.println(ca.toString());
+		ca.retirar(500);
+		System.out.println("Retiramos 500");
+		System.out.println(ca.toString());
 
 	}
 

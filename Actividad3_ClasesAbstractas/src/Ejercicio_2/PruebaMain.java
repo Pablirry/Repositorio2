@@ -7,12 +7,12 @@ public class PruebaMain {
 		Persona p = new Persona("Juan", "Perez", "12345678A");
 		
 
-		CuentaAhorro ca = new CuentaAhorro(p, 1111, 2.5, 600);
+		CuentaAhorro ca = new CuentaAhorro(p, 1111, 2.5, 400);
 		System.out.println(ca.toString());
 		ca.ingresar(1000);
 		System.out.println("Ingresamos 1000");
 		System.out.println(ca.toString());
-		ca.retirar(900);
+		ca.retirar(100);
 		System.out.println("Retiramos 100");
 		System.out.println(ca.toString());
 		ca.retirar(500);

@@ -1,12 +1,11 @@
 package Ejercicio_5;
 
-public class Estudiante extends Persona {
+public class Estudiante extends Persona implements Humano {
 
     private int idEstudiante;
 
     public Estudiante(String nombre, String apellidos, String nIF, Direccion direccion, int idEstudiante) {
         super(nombre, apellidos, nIF, direccion);
-
         this.idEstudiante = idEstudiante;
     }
 
@@ -25,12 +24,8 @@ public class Estudiante extends Persona {
 
     @Override
     public void identificate() {
-        System.out.println("\tEstudiante");
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + "\n\tidEstudiante=" + idEstudiante;
+        System.out.println("Estudiante: " + idEstudiante);
+        System.out.println(this.toString());
     }
 
 }

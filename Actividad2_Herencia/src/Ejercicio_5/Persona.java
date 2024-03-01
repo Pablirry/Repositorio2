@@ -1,6 +1,6 @@
 package Ejercicio_5;
 
-public class Persona implements Humano {
+public class Persona {
 
     // nombre, apellidos y NIF
 
@@ -25,13 +25,10 @@ public class Persona implements Humano {
     }
 
     @Override
-    public void identificate() {
-        System.out.println("Persona");
-    }
-
-    @Override
     public String toString() {
-        return "Persona [nombre = " + nombre + ", apellidos = " + apellidos + ", NIF = " + NIF + ", direccion = " + direccion.toString()
-                + "]";
+        return "Persona [nombre = " + nombre + 
+        		", apellidos = " + apellidos + 
+        		", NIF = " + NIF + "]" +
+        		"\n\tDireccion = " + direccion.toString();
     }
 }

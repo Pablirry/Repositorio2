@@ -7,20 +7,6 @@ public class Lavavajillas extends Electrodomestico {
 	private int carga;
 
 	/**
-	 * Constructor con todos los paramteros
-	 * @param precioBase : double
-	 * @param color : Colores
-	 * @param consumoEnergetico : char
-	 * @param peso : double
-	 * @param carga : entero
-	 */
-
-	public Lavavajillas(double precioBase, Colores color, char consumoEnergetico, double peso, int carga) {
-		super(precioBase, color, consumoEnergetico, peso);
-		this.carga = carga;
-	}
-
-	/**
 	 * Contructor por defecto
 	 */
 
@@ -47,7 +33,7 @@ public class Lavavajillas extends Electrodomestico {
 	public int getCarga() {
 		return carga;
 	}
-	
+
 	/**
 	 * Metodo que calcula el precio final de los lavavajillas
 	 */
@@ -63,7 +49,7 @@ public class Lavavajillas extends Electrodomestico {
 
 		return precioFinal;
 	}
-	
+
 	/**
 	 * Metodo toString de la clase lavavajillas
 	 */
@@ -72,7 +58,5 @@ public class Lavavajillas extends Electrodomestico {
 	public String toString() {
 		return super.toString() + "\n\tLavavajillas [carga=" + carga + "]";
 	}
-
-	
 
 }

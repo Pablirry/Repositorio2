@@ -12,21 +12,6 @@ public abstract class Electrodomestico {
 	private double peso;
 
 	/**
-	 * Contructor con todos los parametros
-	 * @param precioBase : double
-	 * @param color : Colores
-	 * @param consumoEnergetico : char
-	 * @param peso : double
-	 */
-
-	public Electrodomestico(double precioBase, Colores color, char consumoEnergetico, double peso) {
-		this.precioBase = precioBase;
-		this.color = color;
-		this.consumoEnergetico = consumoEnergetico;
-		this.peso = peso;
-	}
-
-	/**
 	 * Constructor por defecto
 	 */
 
@@ -79,9 +64,10 @@ public abstract class Electrodomestico {
 	public double getPeso() {
 		return peso;
 	}
-	
+
 	/**
 	 * Metodo para comprobar que el consumo energetico es valido
+	 * 
 	 * @param letra : char
 	 * @return : boolean
 	 */
@@ -89,9 +75,10 @@ public abstract class Electrodomestico {
 	private boolean comprobarConsumoEnergetico(char letra) {
 		return letra >= 'A' && letra <= 'F';
 	}
-	
+
 	/**
 	 * Metodo set de consumo energetico
+	 * 
 	 * @param letra : char
 	 */
 
@@ -103,9 +90,10 @@ public abstract class Electrodomestico {
 			this.consumoEnergetico = CE_POR_DEFECTO;
 		}
 	}
-	
+
 	/**
 	 * Metodo que calcula un precio dependiendo del consumo energetico y su peso
+	 * 
 	 * @return : double
 	 */
 
@@ -151,12 +139,12 @@ public abstract class Electrodomestico {
 	/**
 	 * Metodo sobrecargado toStringz
 	 */
-	
+
 	@Override
 	public String toString() {
-		return "Electrodomestico [precioBase=" + precioBase + 
+		return "Electrodomestico [precioBase=" + precioBase +
 				", color=" + color + ", consumoEnergetico="
-				+ consumoEnergetico + 
+				+ consumoEnergetico +
 				", peso=" + peso + "]";
 	}
 

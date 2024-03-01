@@ -7,20 +7,6 @@ public class Monitor extends Electrodomestico {
 	private int dim;
 
 	/**
-	 * Contructor con todos los parametros
-	 * @param precioBase : double
-	 * @param color : Colores
-	 * @param consumoEnergetico : char
-	 * @param peso : double
-	 * @param dim : entero
-	 */
-
-	public Monitor(double precioBase, Colores color, char consumoEnergetico, double peso, int dim) {
-		super(precioBase, color, consumoEnergetico, peso);
-		this.dim = dim;
-	}
-
-	/**
 	 * Contructor por defecto
 	 */
 
@@ -43,13 +29,14 @@ public class Monitor extends Electrodomestico {
 
 	/**
 	 * Metodo get del atributo dimension
+	 * 
 	 * @return : entero
 	 */
 
 	public int getDim() {
 		return dim;
 	}
-	
+
 	/**
 	 * Metodo que calcula el precio final del monitor
 	 */
@@ -63,7 +50,7 @@ public class Monitor extends Electrodomestico {
 
 		return precioFinal;
 	}
-	
+
 	/**
 	 * Metodo toString de la clase monitor
 	 */

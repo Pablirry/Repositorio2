@@ -2,9 +2,9 @@ package ActAula;
 
 public abstract class Electrodomestico {
 
-	private static final char CE_POR_DEFECTO = 'F';
-	private static final double PRECIO_POR_DEFECTO = 100;
-	private static final double PESO_POR_DEFECTO = 5;
+	private final char CE_POR_DEFECTO = 'F';
+	private final double PRECIO_POR_DEFECTO = 100;
+	private final double PESO_POR_DEFECTO = 5;
 
 	private double precioBase;
 	private Colores color;
@@ -101,26 +101,26 @@ public abstract class Electrodomestico {
 		double precioFinal = precioBase;
 
 		switch (consumoEnergetico) {
-			case 'A':
-				precioFinal += 100;
-				break;
-			case 'B':
-				precioFinal += 80;
-				break;
-			case 'C':
-				precioFinal += 60;
-				break;
-			case 'D':
-				precioFinal += 40;
-				break;
-			case 'E':
-				precioFinal += 40;
-				break;
-			case 'F':
-				precioFinal += 40;
-				break;
-			default:
-				System.out.println("Consumo energético no válido");
+		case 'A':
+			precioFinal += 100;
+			break;
+		case 'B':
+			precioFinal += 80;
+			break;
+		case 'C':
+			precioFinal += 60;
+			break;
+		case 'D':
+			precioFinal += 40;
+			break;
+		case 'E':
+			precioFinal += 40;
+			break;
+		case 'F':
+			precioFinal += 40;
+			break;
+		default:
+			System.out.println("Consumo energético no válido");
 		}
 
 		if (peso >= 0 && peso <= 19) {
@@ -142,10 +142,8 @@ public abstract class Electrodomestico {
 
 	@Override
 	public String toString() {
-		return "Electrodomestico [precioBase=" + precioBase +
-				", color=" + color + ", consumoEnergetico="
-				+ consumoEnergetico +
-				", peso=" + peso + "]";
+		return "Electrodomestico [precioBase=" + precioBase + ", color=" + color + ", consumoEnergetico="
+				+ consumoEnergetico + ", peso=" + peso + "]";
 	}
 
 }

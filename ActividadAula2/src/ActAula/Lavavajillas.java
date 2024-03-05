@@ -2,7 +2,7 @@ package ActAula;
 
 public class Lavavajillas extends Electrodomestico {
 
-	private static final int CARGA_POR_DEFECTO = 8;
+	private final int CARGA_POR_DEFECTO = 8;
 
 	private int carga;
 

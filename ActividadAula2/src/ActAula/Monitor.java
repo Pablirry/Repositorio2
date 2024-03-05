@@ -2,7 +2,7 @@ package ActAula;
 
 public class Monitor extends Electrodomestico {
 
-	private static final int DIM_POR_DEFECTO = 30;
+	private final int DIM_POR_DEFECTO = 30;
 
 	private int dim;
 

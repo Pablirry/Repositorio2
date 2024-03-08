@@ -1,30 +1,27 @@
-package Ejercicio_3;
+package tareaEntrega;
 
 public abstract class Persona implements Humano {
 
 	protected String nif;
 	protected String nombre;
 	protected String apellidos;
-	protected Direccion dir;
+	protected Direccion direccion;
 	
-	protected static int contVeces = 0;
-	
-	public int getContVeces() {
-		return contVeces;
-	}
 
 	/**
-	 * @param nif
-	 * @param nombre
-	 * @param apellidos
-	 * @param dir
+	 * Constructor con todos los parametros
+	 * 
+	 * @param nif       : String
+	 * @param nombre    : String
+	 * @param apellidos : String
 	 */
-	public Persona(String nif, String nombre, String apellidos, Direccion dir) {
+
+	public Persona(String nif, String nombre, String apellidos, Direccion direccion) {
 		super();
 		this.nif = nif;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
-		this.dir = dir;
+		this.direccion = direccion;
 	}
 
 	/**
@@ -70,23 +67,15 @@ public abstract class Persona implements Humano {
 	}
 
 	/**
-	 * @return : Direccion
+	 * interfaz identificate
 	 */
-	public Direccion getDir() {
-		return dir;
-	}
-
-	/**
-	 * @param dir : Direccion
-	 */
-	public void setDir(Direccion dir) {
-		this.dir = dir;
-	}
 
 	@Override
-	public String toString() {
-		return "Persona [nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + "]" + 
-				"\n\t Direccion= " + dir.toString();
+	public void identificate() {
+		System.out.println("NIF: " + nif);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellidos: " + apellidos);
+		System.out.println(direccion.toString());
 	}
-
+	
 }

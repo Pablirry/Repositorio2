@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"tareaEntrega","l":"Colegio"},{"p":"tareaEntrega","l":"Direccion"},{"p":"tareaEntrega","l":"Estudiante"},{"p":"tareaEntrega","l":"Humano"},{"p":"tareaEntrega","l":"Persona"},{"p":"tareaEntrega","l":"Profesor"},{"p":"tareaEntrega","l":"pruebaMain"}];updateSearchResults();

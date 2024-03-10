@@ -42,69 +42,92 @@ public class Direccion {
 	}
 
 	/**
+	 * Metodo get del atributo calle
+	 * 
 	 * @return : String
 	 */
+
 	public String getCalle() {
 		return calle;
 	}
 
 	/**
+	 * Metodo set del atributo calle
+	 * 
 	 * @param calle : String
 	 */
+
 	public void setCalle(String calle) {
 		this.calle = calle;
 	}
 
 	/**
+	 * Metodo get del atributo ciudad
+	 * 
 	 * @return : String
 	 */
+
 	public String getCiudad() {
 		return ciudad;
 	}
 
 	/**
+	 * Metodo set del atributo ciudad
+	 * 
 	 * @param ciudad : String
 	 */
+
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
 
 	/**
-	 * @return : entero
+	 * Metodo get del atributo cp
+	 * 
+	 * @return: entero
 	 */
+
 	public int getCp() {
 		return cp;
 	}
 
 	/**
+	 * Metodo set del atributo cp
+	 * 
 	 * @param cp : entero
 	 */
+
 	public void setCp(int cp) {
 		this.cp = cp;
 	}
 
 	/**
-	 * @return : String
+	 * Metodo get del atributo pais
+	 * 
+	 * @return: String
 	 */
+
 	public String getPais() {
 		return pais;
 	}
 
 	/**
+	 * Metodo set del atributo pais
+	 * 
 	 * @param pais : String
 	 */
+
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
 
+	/**
+	 * Metodo toString de la clase direccion
+	 */
+
 	@Override
 	public String toString() {
-		return "Direccion [calle=" + calle + 
-				", ciudad=" + ciudad + 
-				", cp=" + cp + 
-				", pais=" + pais + "]";
+		return "Direccion [calle=" + calle + ", ciudad=" + ciudad + ", cp=" + cp + ", pais=" + pais + "]";
 	}
-	
-	
 
 }

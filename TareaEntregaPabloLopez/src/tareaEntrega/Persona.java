@@ -6,7 +6,6 @@ public abstract class Persona implements Humano {
 	protected String nombre;
 	protected String apellidos;
 	protected Direccion direccion;
-	
 
 	/**
 	 * Constructor con todos los parametros
@@ -25,6 +24,8 @@ public abstract class Persona implements Humano {
 	}
 
 	/**
+	 * Metodo get del atributo nif
+	 * 
 	 * @return : String
 	 */
 	public String getNif() {
@@ -32,6 +33,8 @@ public abstract class Persona implements Humano {
 	}
 
 	/**
+	 * Metodo set del atributo nif
+	 * 
 	 * @param nif : String
 	 */
 	public void setNif(String nif) {
@@ -39,6 +42,8 @@ public abstract class Persona implements Humano {
 	}
 
 	/**
+	 * Metodo get del atributo nombre
+	 * 
 	 * @return : String
 	 */
 	public String getNombre() {
@@ -46,6 +51,8 @@ public abstract class Persona implements Humano {
 	}
 
 	/**
+	 * Metodo set del atributo nombre
+	 * 
 	 * @param nombre : String
 	 */
 	public void setNombre(String nombre) {
@@ -53,6 +60,8 @@ public abstract class Persona implements Humano {
 	}
 
 	/**
+	 * Metodo get del atributo apellidos
+	 * 
 	 * @return : String
 	 */
 	public String getApellidos() {
@@ -60,6 +69,8 @@ public abstract class Persona implements Humano {
 	}
 
 	/**
+	 * Metodo set del atributo apellidos
+	 * 
 	 * @param apellidos : String
 	 */
 	public void setApellidos(String apellidos) {
@@ -73,9 +84,9 @@ public abstract class Persona implements Humano {
 	@Override
 	public void identificate() {
 		System.out.println("NIF: " + nif);
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Apellidos: " + apellidos);
+		System.out.println("Nombre: " + nombre);
+		System.out.println("Apellidos: " + apellidos);
 		System.out.println(direccion.toString());
 	}
-	
+
 }

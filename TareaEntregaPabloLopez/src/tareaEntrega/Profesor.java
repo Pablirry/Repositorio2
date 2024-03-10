@@ -19,6 +19,8 @@ public class Profesor extends Persona {
 	}
 
 	/**
+	 * Metodo get del atributo despacho
+	 * 
 	 * @return : String
 	 */
 	public String getDespacho() {
@@ -26,6 +28,8 @@ public class Profesor extends Persona {
 	}
 
 	/**
+	 * Metodo set del atributo despacho
+	 * 
 	 * @param despacho : String
 	 */
 	public void setDespacho(String despacho) {
@@ -42,14 +46,12 @@ public class Profesor extends Persona {
 	}
 
 	/**
-	 * Metodo toString
+	 * Metodo toString de la clase profesor
 	 */
 
 	@Override
-    public String toString() {
-        return "Despacho: " + getDespacho() + 
-		"\nNIF: " + getNif() + 
-		"\nNombre: " + getNombre() + " " + getApellidos() + 
-		"\n" + direccion.toString();
-    }
+	public String toString() {
+		return "Despacho: " + getDespacho() + "\nNIF: " + getNif() + "\nNombre: " + getNombre() + " " + getApellidos()
+				+ "\n" + direccion.toString();
+	}
 }

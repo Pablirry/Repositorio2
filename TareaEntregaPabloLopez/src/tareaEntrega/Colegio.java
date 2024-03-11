@@ -7,13 +7,11 @@ public class Colegio {
 
 	/**
 	 * Constructor de la clase Colegio
-	 * 
-	 * @param capacidad : entero
 	 */
 
-	public Colegio(int capacidad) {
+	public Colegio() {
 
-		this.personas = new Persona[capacidad];
+		personas = null;
 		this.contPersonas = 0;
 	}
 
@@ -44,15 +42,20 @@ public class Colegio {
 	 */
 
 	public void insertarPersona(Persona persona) {
-		if (contPersonas < personas.length) {
-			personas[contPersonas] = persona;
-			contPersonas++;
-			System.out.println("Persona insertada");
-			persona.identificate();
-			System.out.println();
+		if (personas == null) {
+			personas = new Persona[1];
+			personas[0] = persona;
 		} else {
-			System.out.println("No se puede añadir más personas, la capacidad está llena.");
+			int nuevoTam = personas.length + 1;
+			Persona vNuevo[] = new Persona[nuevoTam];
+			for (int i = 0; i < personas.length; i++) {
+				vNuevo[i] = personas[i];
+			}
+			int pos = nuevoTam - 1;
+			vNuevo[pos] = persona;
+			personas = vNuevo;
 		}
+		
 	}
 
 	/**
@@ -66,7 +69,7 @@ public class Colegio {
 				System.out.println(persona.toString());
 			System.out.println();
 		}
-		if (contPersonas == 0) {
+		if (personas.length == 0) {
 			System.out.println("No hay personas asignadas al colegio.");
 		}
 	}
@@ -106,6 +109,32 @@ public class Colegio {
 			}
 		}
 		System.out.println("No se encontró ninguna persona con el NIF " + nif + ".");
+	}
+
+	/**
+	 * Metodo para cargar los datos del colegio
+	 */
+
+	public void cargaDatos() {
+		Direccion dir1 = new Direccion("calle 1", "Oviedo", "España");
+		Direccion dir2 = new Direccion("calle 1", "Oviedo", 33001, "España");
+
+		Estudiante estudiante = new Estudiante("55556789A", "Juan", "Gomez", dir1);
+		Estudiante estudiante2 = new Estudiante("22222222A", "Juan", "Gomez", dir1);
+		Estudiante estudiante3 = new Estudiante("123456789A", "Juan", "Gomez", dir2);
+		Profesor profesor = new Profesor("987654321B", "22255664L", "Perez", "Lopez", dir1);
+		Profesor profesor2 = new Profesor("987654321B", "84795244O", "Perez", "Lopez", dir2);
+
+		// Puedes ajustar la capacidad del colegio según la cantidad de datos a cargar
+		int capacidad = 5;
+		this.personas = new Persona[capacidad];
+		this.contPersonas = 0;
+
+		insertarPersona(estudiante);
+		insertarPersona(estudiante2);
+		insertarPersona(estudiante3);
+		insertarPersona(profesor);
+		insertarPersona(profesor2);
 	}
 
 }

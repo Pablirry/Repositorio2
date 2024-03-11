@@ -1,6 +1,6 @@
 package tareaEntrega;
 
-public abstract class Persona implements Humano {
+public abstract class Persona implements I_Humano {
 
 	protected String nif;
 	protected String nombre;

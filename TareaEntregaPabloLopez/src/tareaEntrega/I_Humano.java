@@ -1,6 +1,6 @@
 package tareaEntrega;
 
-public interface Humano {
+public interface I_Humano {
 
 	public void identificate();
 

@@ -67,7 +67,6 @@ public class pruebaMain {
 		} else {
 			System.out.println("Tipo de persona no válido.");
 		}
-
 	}
 
 	private static Direccion crearDireccion() {

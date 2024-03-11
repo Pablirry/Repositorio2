@@ -34,14 +34,31 @@ public class Colegio {
 	public void setPersonas(Persona[] personas) {
 		this.personas = personas;
 	}
+	
+	
+
+	/**
+	 * @return : entero
+	 */
+	public int getContPersonas() {
+		return contPersonas;
+	}
+
+	/**
+	 * @param contPersonas : entero
+	 */
+	public void setContPersonas(int contPersonas) {
+		this.contPersonas = contPersonas;
+	}
 
 	/**
 	 * Metodo para insertar una persona al colegio
 	 * 
 	 * @param persona : Persona
+	 * @return 
 	 */
 
-	public void insertarPersona(Persona persona) {
+	public boolean insertarPersona(Persona persona) {
 		if (personas == null) {
 			personas = new Persona[1];
 			personas[0] = persona;
@@ -55,6 +72,9 @@ public class Colegio {
 			vNuevo[pos] = persona;
 			personas = vNuevo;
 		}
+		
+		contPersonas++;
+		return true;
 		
 	}
 
@@ -82,9 +102,8 @@ public class Colegio {
 
 	public void borrarPersona(String nif) {
 
-		for (int i = 0; i < contPersonas; i++) {
+		for (int i = 0; i < personas.length; i++) {
 			if (personas[i] != null && personas[i].getNif().equals(nif)) {
-
 				personas[i] = null;
 				System.out.println("Persona con NIF " + nif + " eliminada correctamente.");
 				return;
@@ -101,14 +120,13 @@ public class Colegio {
 	 * @param nif : String
 	 */
 
-	public void buscarPersona(String nif) {
+	public Persona buscarPersona(String nif) {
 		for (Persona persona : personas) {
 			if (persona != null && persona.getNif().equals(nif)) {
-				System.out.println("Persona encontrada: " + persona.toString());
-				return;
+				return persona;
 			}
 		}
-		System.out.println("No se encontró ninguna persona con el NIF " + nif + ".");
+		return null;
 	}
 
 	/**

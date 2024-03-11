@@ -95,7 +95,12 @@ public class pruebaMain {
 	private static void buscarPersona(Colegio colegio) {
 		System.out.print("Introduce el NIF de la persona a buscar: ");
         String nif = sc.next();
-        colegio.buscarPersona(nif);
+		Persona personaEncontrada = colegio.buscarPersona(nif);
+        if (personaEncontrada != null) {
+			System.out.println("Persona encontrada: " + personaEncontrada.toString());
+		} else {
+			System.out.println("No se encontró ninguna persona con el NIF " + nif + ".");
+		}
 	}
 
 	/**

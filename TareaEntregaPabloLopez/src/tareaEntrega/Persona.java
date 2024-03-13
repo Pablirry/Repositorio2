@@ -1,6 +1,6 @@
 package tareaEntrega;
 
-public abstract class Persona implements I_Humano {
+public abstract class Persona {
 
 	protected String nif;
 	protected String nombre;
@@ -75,18 +75,6 @@ public abstract class Persona implements I_Humano {
 	 */
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
-	}
-
-	/**
-	 * interfaz identificate
-	 */
-
-	@Override
-	public void identificate() {
-		System.out.println("NIF: " + nif);
-		System.out.println("Nombre: " + nombre);
-		System.out.println("Apellidos: " + apellidos);
-		System.out.println(direccion.toString());
 	}
 
 }

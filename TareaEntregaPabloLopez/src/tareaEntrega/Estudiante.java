@@ -38,15 +38,6 @@ public class Estudiante extends Persona {
 	}
 
 	/**
-	 * Metodo interfaz identificate
-	 */
-
-	@Override
-	public void identificate() {
-		System.out.println(this.toString());
-	}
-
-	/**
 	 * Metodo toString de la clase estudiante
 	 */
 

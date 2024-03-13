@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+D:\DAM AFA\1º DAM\Programación\Segunda evaluacion\workspace 2ev\Repositorio2\.metadata\.plugins\org.eclipse.jdt.core
-1392083481.index
-888800307.index
-1865797976.index

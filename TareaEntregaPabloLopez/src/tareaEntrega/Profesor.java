@@ -36,14 +36,7 @@ public class Profesor extends Persona {
 		this.despacho = despacho;
 	}
 
-	/**
-	 * Metodo interfaz identificate
-	 */
 
-	@Override
-	public void identificate() {
-		System.out.println(this.toString());
-	}
 
 	/**
 	 * Metodo toString de la clase profesor
